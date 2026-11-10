@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>画面の一覧と見方｜購入の依頼と決裁（見本）</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="shell">
+<aside class="side" data-shell-sidebar></aside>
+<div>
+<header class="top" data-shell-header></header>
+<main class="main">
+  <div class="page-head">
+    <div>
+      <h1>カタログ外購入（10 万円以下）To-Be の画面の見本</h1>
+      <p>依頼から支払まで AI と RPA が進め、人は 4 つのことだけを決めます。この見本は見た目と流れを示すもので、ボタンを押しても何も記録されません。</p>
+    </div>
+    <a class="btn primary big" href="request.html">1 件の案件を最初から辿る</a>
+  </div>
+
+  <div class="grid">
+    <section class="card c-12">
+      <header><h2>人に残る 4 つの役割</h2><span class="sub">ほかの作業（転記・照合・書類づくり・取引先とのやり取り・進捗の管理）は AI と RPA が行います</span></header>
+      <div class="body grid">
+        <div class="c-3 stack-s">
+          <span class="tag human">① 依頼者</span>
+          <b>何を決裁してほしいかを決める</b>
+          <p class="small muted">AI が整えた申請を確かめ、1 操作で確定する。</p>
+          <a href="confirm.html">申請の確認と確定 →</a>
+        </div>
+        <div class="c-3 stack-s">
+          <span class="tag human">② 承認者</span>
+          <b>承認して問題ないかを決める</b>
+          <p class="small muted">要約・根拠・規程との照合・リスク・似た案件を 1 画面で見て可否を出す。</p>
+          <a href="approve.html">承認の材料 →</a>
+        </div>
+        <div class="c-3 stack-s">
+          <span class="tag human">③ 規程・監査の担当</span>
+          <b>ルールを決め、監査する</b>
+          <p class="small muted">任せる段階・例外の基準を決め、記録を抜き取りで確かめる（月ごと）。</p>
+          <a href="rules.html">ルールと監査 →</a>
+        </div>
+        <div class="c-3 stack-s">
+          <span class="tag human">④ 受け取る人</span>
+          <b>物を受け取ったことを確かめる</b>
+          <p class="small muted">注文どおりかを見て、1 操作か写真で返す（物の購入のとき）。</p>
+          <a href="receive.html">受け取りの確認 →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card c-12">
+      <header><h2>任せる段階の印</h2><span class="sub">工程ごとに、どこまで AI・RPA に任せているかを全ての画面でこの印で示します</span></header>
+      <div class="body legend">
+        <span class="lv" data-lv="0">人が決める（任せない）</span>
+        <span class="lv" data-lv="1">人が可否を出してから実行</span>
+        <span class="lv" data-lv="2">AI が実行・人は記録を見て止められる</span>
+        <span class="lv" data-lv="3">自動（監査で見るだけ）</span>
+      </div>
+      <div class="body small muted">同じ工程で連続 20 件を直しなしで通すと、段階を 1 つ上げる候補になります（上げるかは ③ が決める）。1 件でも事故・直しがあれば、その工程は自動で 1 段階戻ります。</div>
+    </section>
+
+    <section class="card c-12">
+      <header><h2>1 件の案件の 10 段</h2><span class="sub">下に黄色の線がある段は人が決める段。押すとその段の画面へ移ります</span></header>
+      <div class="body"><div data-flow="0"></div></div>
+    </section>
+
+    <section class="card c-12">
+      <header><h2>画面の一覧</h2><span class="sub">左の帯からも移れます</span></header>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>画面</th><th>使う人</th><th>人がすること</th><th>AI・RPA がしておくこと</th></tr></thead>
+          <tbody>
+            <tr><td><a href="request.html">依頼の入力</a></td><td>依頼者</td><td>チャットで買いたい物を伝え、聞き返しに答える</td><td>必須項目を埋め、足りない項目を聞き返す</td></tr>
+            <tr><td><a href="confirm.html">申請の確認と確定</a></td><td>① 依頼者</td><td>下書きを確かめて 1 操作で確定</td><td>見積の依頼と比較、起案の下書き、決裁者の候補、承認の材料</td></tr>
+            <tr><td><a href="case.html">案件の詳細と記録</a></td><td>全員</td><td>段階 1 の工程の可否（例: 決裁への入力）</td><td>全段の実行と根拠を記録する</td></tr>
+            <tr><td><a href="approve.html">承認の材料</a></td><td>② 承認者</td><td>可否を出す</td><td>要約・根拠・規程との照合・リスク・似た案件を揃える</td></tr>
+            <tr><td><a href="receive.html">受け取りの確認</a></td><td>④ 受け取る人</td><td>1 操作か写真で返す</td><td>注文の内容と納品書を並べて見せる</td></tr>
+            <tr><td><a href="reconcile.html">突合の確認</a></td><td>② 承認者</td><td>差分があるときだけ決める</td><td>請求書を読み、注文書・検収と突き合わせる</td></tr>
+            <tr><td><a href="cases.html">案件の一覧と状態</a></td><td>全員</td><td>止まった案件を見つける</td><td>段・担い手・期限を持ち、催促する</td></tr>
+            <tr><td><a href="exceptions.html">例外の待ち行列</a></td><td>② 承認者</td><td>AI が解けなかったものを決める</td><td>問い合わせ・再見積で先に解き、戻す理由を書く</td></tr>
+            <tr><td><a href="rules.html">ルールと監査</a></td><td>③ 規程・監査</td><td>任せる段階を上げるか決める、抜き取りの結果を残す</td><td>広げる条件の達成を記録から判定する</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+</div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

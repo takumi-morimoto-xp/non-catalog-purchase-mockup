@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>例外の待ち行列｜購入の依頼と決裁（見本）</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-who="例示 次郎（総務部 課長）">
+<div class="shell">
+<aside class="side" data-shell-sidebar></aside>
+<div>
+<header class="top" data-shell-header></header>
+<main class="main">
+  <div class="page-head">
+    <div>
+      <h1>例外の待ち行列 <span class="tag human">② 承認者</span></h1>
+      <p>条件に当たった案件は、AI がまず問い合わせ・再見積で解き、解けなかったものだけが理由つきでここへ来ます。疑わしいものは戻す（保守的な）基準で動いています。</p>
+    </div>
+    <span class="tag plain">AI が解いた例外 今月 7 件・ここへ来た 3 件</span>
+  </div>
+
+  <div class="stack">
+    <section class="card">
+      <header><h2>R-0131 来客用の椅子 4 脚</h2><div class="row"><span class="tag ng">取引先の返事なし</span><span class="small muted">段 2 見積・2 日超過</span></div></header>
+      <div class="body grid">
+        <div class="c-8 stack-s small">
+          <p><b>人に戻した理由:</b> 3 社のうち 2 社から見積の返事が無く、相見積の基準（2 社以上）を満たせません。</p>
+          <ul class="log">
+            <li><time>4 日前</time><div class="what"><span>3 社へ見積を依頼</span><span class="why">可: 見本 一郎（段階 1）</span></div></li>
+            <li><time>2 日前</time><div class="what"><span>返事の無い 2 社へ催促</span><span class="why">返事なし</span></div></li>
+            <li><time>今日</time><div class="what"><span>取引先の一覧から別の 1 社の候補を見つけた</span><span class="why">ただし過去の取引 0 件（新規の取引先に当たるため AI は依頼しない）</span></div></li>
+          </ul>
+        </div>
+        <div class="c-4">
+          <section class="decide">
+            <span class="label">あなたが決めること</span>
+            <p class="small">AI の推し: 1 社の見積で進める理由を残して承認の材料に加える。</p>
+            <div class="actions">
+              <button class="btn primary" type="button" data-done="1 社で進めます（見本）">1 社で進める</button>
+              <button class="btn" type="button" data-done="新規の取引先の審査へ回します（見本）">新規の取引先を審査へ</button>
+              <button class="btn" type="button" data-done="取り下げました（見本）">取り下げる</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <header><h2>R-0135 部署用の複合機の消耗品</h2><div class="row"><span class="tag ng">様式の指定</span><span class="small muted">段 7 発注</span></div></header>
+      <div class="body grid">
+        <div class="c-8 stack-s small">
+          <p><b>人に戻した理由:</b> 取引先が自社の注文書の様式を指定しています。ME の様式以外は自動で作らない決まりです。</p>
+          <ul class="log">
+            <li><time>昨日</time><div class="what"><span>ME の様式で注文書を作成し送付の可否を待っていた</span><span class="why">取引先から「指定の様式で」と返信</span></div></li>
+          </ul>
+        </div>
+        <div class="c-4">
+          <section class="decide">
+            <span class="label">あなたが決めること</span>
+            <div class="actions">
+              <button class="btn primary" type="button" data-done="ME の様式で受けてもらうよう頼みます（見本）">ME の様式で頼む</button>
+              <button class="btn" type="button" data-done="指定の様式は人が作ります（見本）">指定の様式で人が作る</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <header><h2>R-0129 研修用の教材</h2><div class="row"><span class="tag ng">読み取りの自信が低い</span><span class="small muted">段 9 請求と支払</span></div></header>
+      <div class="body grid">
+        <div class="c-8 stack-s small">
+          <p><b>人に戻した理由:</b> 請求書が紙を写した画像で、金額の欄の読み取りの自信が基準より低いため、突合の結果を確定していません。</p>
+          <div class="grid">
+            <div class="c-6 photo">請求書の画像（見本）</div>
+            <dl class="c-6 kv">
+              <dt>読んだ金額</dt><dd class="num">3?,960 円</dd>
+              <dt>注文書の金額</dt><dd class="num">35,960 円</dd>
+              <dt>自信</dt><dd><span class="tag wait">低い</span></dd>
+            </dl>
+          </div>
+        </div>
+        <div class="c-4">
+          <section class="decide">
+            <span class="label">あなたが決めること</span>
+            <div class="actions">
+              <button class="btn primary" type="button" data-done="35,960 円で確定しました（見本）">35,960 円で正しい</button>
+              <button class="btn" type="button" data-done="取引先に電子の請求書を頼みます（見本）">取引先に出し直しを頼む</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
