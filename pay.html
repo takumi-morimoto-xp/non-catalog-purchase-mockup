@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>支払の承認｜購入の依頼と決裁（見本）</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-who="例示 次郎（総務部 課長）">
+<header class="top" data-shell-header></header>
+<main class="main">
+  <div data-stage="9"></div>
+
+  <section class="decide">
+    <h1>この支払を承認しますか</h1>
+    <dl class="facts">
+      <dt>何を</dt><dd>会議室のディスプレイ 2 台と壁掛け金具</dd>
+      <dt>いくら</dt><dd class="num">78,320 円<small>月末に見本電機（仮）へ</small></dd>
+      <dt>なぜ</dt><dd>受け取り済みで、請求書が届いた</dd>
+    </dl>
+    <p class="verdict"><b>問題なし</b><span>請求書・注文書・受け取りが全て一致</span></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-done="支払を承認しました。月末に支払われます（見本）">承認する</button>
+      <button class="btn" type="button" data-done="差し戻しました（見本）">差し戻す</button>
+    </div>
+  </section>
+
+  <details class="fold">
+    <summary>根拠を見る</summary>
+    <div class="body">
+      <section>
+        <h3>突合</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>項目</th><th class="num">注文書</th><th class="num">受け取り</th><th class="num">請求書</th></tr></thead>
+            <tbody>
+              <tr><td>ディスプレイ 50 型</td><td class="num">2 × 34,100 円</td><td class="num">2</td><td class="num">2 × 34,100 円</td></tr>
+              <tr><td>壁掛け金具</td><td class="num">2 × 1,500 円</td><td class="num">2</td><td class="num">2 × 1,500 円</td></tr>
+              <tr><td>消費税</td><td class="num">7,120 円</td><td class="num">—</td><td class="num">7,120 円</td></tr>
+              <tr><td>合計</td><td class="num">78,320 円</td><td class="num">—</td><td class="num">78,320 円</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h3>記録</h3>
+        <ul class="log">
+          <li><time>4 日前</time><span>見本 花子 が注文どおり受け取った</span></li>
+          <li><time>今日</time><span>請求書 INV-5521 を読み、注文書 PO-0142 と受け取りに突き合わせた: 差なし</span></li>
+          <li><time>今日</time><span>支払の決裁を下書きした。<a href="case.html">案件の記録</a></span></li>
+        </ul>
+      </section>
+    </div>
+  </details>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

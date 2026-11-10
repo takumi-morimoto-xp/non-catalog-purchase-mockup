@@ -4,89 +4,60 @@
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>突合の確認｜購入の依頼と決裁（見本）</title>
+<title>請求の差｜購入の依頼と決裁（見本）</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-who="例示 次郎（総務部 課長）">
-<div class="shell">
-<aside class="side" data-shell-sidebar></aside>
-<div>
 <header class="top" data-shell-header></header>
 <main class="main">
-  <div class="page-head">
-    <div>
-      <h1>突合の確認</h1>
-      <p>AI が請求書を読み、注文書・検収と突き合わせます。差分が無ければそのまま支払決裁の起案へ進み、差分があるときだけ人が決めます。</p>
+  <div data-stage="9"></div>
+
+  <section class="decide">
+    <h1>請求の差 1,210 円をどうしますか</h1>
+    <dl class="facts">
+      <dt>何を</dt><dd>トナー（黒）6 本<small>R-0139</small></dd>
+      <dt>いくら</dt><dd class="num">請求 28,930 円<small>注文 27,720 円</small></dd>
+      <dt>なぜ</dt><dd>取引先は「分納の 2 回目の送料」と言う</dd>
+    </dl>
+    <p class="verdict warn"><b>要確認</b><span>見積は送料込み。直しを頼むのを推す</span></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-done="請求書の直しを取引先へ頼みます（見本）">直しを頼む</button>
+      <button class="btn" type="button" data-done="差額を認めて支払の決裁を下書きします（見本）">差を認める</button>
     </div>
-    <div class="row"><span class="lv" data-lv="2">差分なし: 止められる</span><span class="lv" data-lv="1">差分あり: 人が可否</span></div>
-  </div>
+  </section>
 
-  <div class="stack">
-    <div data-flow="9"></div>
-
-    <section class="card">
-      <div class="tabs" data-tabs="rc" role="tablist">
-        <button type="button" data-tab="ok" aria-selected="true">R-0142（差分なし）</button>
-        <button type="button" data-tab="diff" aria-selected="false">R-0139（差分あり・あなたの判断待ち）</button>
+  <details class="fold alert" open>
+    <summary>差のある項目</summary>
+    <div class="body">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>項目</th><th class="num">注文書</th><th class="num">請求書</th><th class="num">差</th></tr></thead>
+          <tbody>
+            <tr class="diff"><td>送料</td><td class="num">0 円</td><td class="num">1,100 円</td><td class="num">+1,100 円</td></tr>
+            <tr class="diff"><td>合計（税込）</td><td class="num">27,720 円</td><td class="num">28,930 円</td><td class="num">+1,210 円</td></tr>
+          </tbody>
+        </table>
       </div>
+    </div>
+  </details>
 
-      <div data-panel="rc:ok">
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>項目</th><th>注文書 PO-0142</th><th>検収</th><th>請求書 INV-5521</th><th>結果</th></tr></thead>
-            <tbody>
-              <tr><td>ディスプレイ 50 型</td><td class="num">2 × 34,100 円</td><td class="num">2 受領</td><td class="num">2 × 34,100 円</td><td><span class="tag ok">一致</span></td></tr>
-              <tr><td>壁掛け金具</td><td class="num">2 × 1,500 円</td><td class="num">2 受領</td><td class="num">2 × 1,500 円</td><td><span class="tag ok">一致</span></td></tr>
-              <tr><td>消費税</td><td class="num">7,120 円</td><td>—</td><td class="num">7,120 円</td><td><span class="tag ok">一致</span></td></tr>
-              <tr><td><b>合計</b></td><td class="num"><b>78,320 円</b></td><td>—</td><td class="num"><b>78,320 円</b></td><td><span class="tag ok">一致</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="body">
-          <div class="spread">
-            <p class="small muted">差分が無いため人の判断は要りません。AI が支払決裁を起案し、承認者へ回しました（支払の承認は ②）。</p>
-            <a class="btn" href="approve.html">支払の承認へ →</a>
-          </div>
-        </div>
-      </div>
-
-      <div data-panel="rc:diff" hidden>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>項目</th><th>注文書 PO-0139</th><th>検収</th><th>請求書 INV-5498</th><th>結果</th></tr></thead>
-            <tbody>
-              <tr><td>トナー（黒）</td><td class="num">6 × 4,200 円</td><td class="num">6 受領</td><td class="num">6 × 4,200 円</td><td><span class="tag ok">一致</span></td></tr>
-              <tr class="diff"><td>送料</td><td class="num">0 円</td><td>—</td><td class="num">1,100 円</td><td><span class="tag ng">差 +1,100 円</span></td></tr>
-              <tr class="diff"><td><b>合計</b></td><td class="num"><b>27,720 円</b></td><td>—</td><td class="num"><b>28,930 円</b></td><td><span class="tag ng">差 +1,210 円（税込）</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="body grid">
-          <div class="c-8 stack-s small">
-            <b>AI が先にしたこと</b>
-            <ul class="log">
-              <li><time>2 日前</time><div class="what"><span>取引先へ送料の根拠を問い合わせた</span><span class="why">返事: 「分納のため 2 回目の送料を加えた」</span></div></li>
-              <li><time>1 日前</time><div class="what"><span>見積 Q-0099 を読み直した</span><span class="why">根拠: 見積は「送料込み・一括納品」。分納は取引先の都合</span></div></li>
-            </ul>
-          </div>
-          <div class="c-4">
-            <section class="decide">
-              <span class="label">あなたが決めること</span>
-              <h2>送料 1,100 円をどうしますか</h2>
-              <p class="small">AI の推し: 見積が送料込みのため、請求書の直しを取引先へ頼む。</p>
-              <div class="actions">
-                <button class="btn primary" type="button" data-done="請求書の直しを取引先へ頼みます（見本）">直しを頼む</button>
-                <button class="btn" type="button" data-done="差額を認めて支払決裁を起案します（見本）">差額を認める</button>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <details class="fold">
+    <summary>根拠を見る</summary>
+    <div class="body">
+      <section>
+        <h3>一致した項目</h3>
+        <ul class="checks"><li>トナー（黒）6 × 4,200 円: 注文書・受け取り・請求書が一致</li></ul>
+      </section>
+      <section>
+        <h3>記録</h3>
+        <ul class="log">
+          <li><time>2 日前</time><span>取引先へ送料の根拠を聞いた。返事:「分納のため 2 回目の送料を加えた」</span></li>
+          <li><time>昨日</time><span>見積 Q-0099 を読み直した:「送料込み・一括納品」。分納は取引先の都合</span></li>
+        </ul>
+      </section>
+    </div>
+  </details>
 </main>
-</div>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

@@ -4,117 +4,65 @@
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>案件の詳細と記録｜購入の依頼と決裁（見本）</title>
+<title>案件の記録｜購入の依頼と決裁（見本）</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-who="見本 花子（総務部）">
-<div class="shell">
-<aside class="side" data-shell-sidebar></aside>
-<div>
 <header class="top" data-shell-header></header>
 <main class="main">
-  <div class="page-head">
-    <div>
-      <h1>R-0142 会議室のディスプレイ 2 台と壁掛け金具</h1>
-      <p>依頼から支払までの全ての段を、誰が・どの段階で・何を根拠に行ったかを 1 本の記録で見られます。</p>
+  <div data-stage="5"></div>
+
+  <section class="decide">
+    <h1>決裁へ申請を送りますか</h1>
+    <dl class="facts">
+      <dt>何を</dt><dd>会議室のディスプレイ 2 台と壁掛け金具<small>R-0142</small></dd>
+      <dt>いくら</dt><dd class="num">78,320 円<small>見本電機（仮）</small></dd>
+      <dt>誰へ</dt><dd>例示 次郎 課長</dd>
+    </dl>
+    <p class="verdict"><b>問題なし</b><span>決裁の画面から読み戻した 12 項目が全て一致</span></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-done="申請を送りました。例示 次郎 課長 へ回ります（見本）">送る</button>
+      <button class="btn" type="button" data-done="止めました。理由を添えて例外へ回します（見本）">止める</button>
     </div>
-    <div class="row"><span class="tag wait">段 5 で人の可否待ち</span><span class="tag plain">期限 あと 1 営業日</span></div>
-  </div>
+  </section>
 
-  <div class="stack">
-    <div data-flow="5"></div>
-
-    <div class="grid">
-      <div class="c-8 stack">
-        <section class="card" id="rpa">
-          <header><h2>段 5 共通IT決裁への入力</h2><span class="row"><span class="tag rpa">RPA</span><span class="lv" data-lv="1">人が可否を出してから実行</span></span></header>
-          <div class="body small muted">RPA が起案の画面に入力して下書きとして保存し、開き直して読み戻しました。全ての項目が一致しています。申請を送る操作だけ、人の可否を待っています。</div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>項目</th><th>確定した申請</th><th>画面から読み戻した値</th><th>結果</th></tr></thead>
-              <tbody>
-                <tr><td>件名</td><td>第 3 会議室用ディスプレイ及び壁掛け金具の購入</td><td>第 3 会議室用ディスプレイ及び壁掛け金具の購入</td><td><span class="tag ok">一致</span></td></tr>
-                <tr><td>金額</td><td class="num">78,320 円</td><td class="num">78,320 円</td><td><span class="tag ok">一致</span></td></tr>
-                <tr><td>予算</td><td>X-000-01</td><td>X-000-01</td><td><span class="tag ok">一致</span></td></tr>
-                <tr><td>取引先</td><td>見本電機（仮）</td><td>見本電機（仮）</td><td><span class="tag ok">一致</span></td></tr>
-                <tr><td>承認者</td><td>例示 次郎 課長</td><td>例示 次郎 課長</td><td><span class="tag ok">一致</span></td></tr>
-                <tr><td colspan="4" class="small muted">ほか 7 項目も一致（12 / 12）。二重の起案の確認: 同じ項番の起案なし。</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <footer>
-            <div class="decide">
-              <span class="label">あなたが決めること（1 操作）</span>
-              <div class="spread">
-                <p>読み戻しは全て一致しました。承認者へ申請を送ってよいですか。</p>
-                <div class="actions">
-                  <button class="btn" type="button" data-done="止めました。理由を添えて例外の待ち行列へ回します（見本）">止める</button>
-                  <button class="btn primary" type="button" data-done="申請を送りました。承認者の 例示 次郎 課長 へ回ります（見本）">送ってよい</button>
-                </div>
-              </div>
-              <span class="small muted">この工程は連続 14 件を直しなしで通過。20 件で「人は記録を見て止められる」段階へ上げる候補になります。</span>
-            </div>
-          </footer>
-        </section>
-
-        <section class="card" id="log">
-          <header><h2>段ごとの記録</h2><span class="sub">担い手・任せる段階・根拠</span></header>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>段</th><th>担い手</th><th>段階</th><th>したこと・根拠</th><th>状態</th></tr></thead>
-              <tbody>
-                <tr><td>1 受け付け</td><td><span class="tag ai">AI</span></td><td><span class="lv" data-lv="2">止められる</span></td><td>依頼を受け、予算を聞き返した。<a href="request.html">会話</a></td><td><span class="tag ok">済</span></td></tr>
-                <tr><td>2 見積</td><td><span class="tag ai">AI</span></td><td><span class="lv" data-lv="1">可否</span></td><td>3 社へ依頼（可: 見本 花子）、3 通を読んで比較。<a href="confirm.html#quotes">比較</a></td><td><span class="tag ok">済</span></td></tr>
-                <tr><td>3 申請の準備</td><td><span class="tag ai">AI</span></td><td><span class="lv" data-lv="2">止められる</span></td><td>起案の下書き、決裁者の候補、承認の材料。<a href="confirm.html#draft">下書き</a></td><td><span class="tag ok">済</span></td></tr>
-                <tr><td>4 申請の確定</td><td><span class="tag human">① 見本 花子</span></td><td><span class="lv" data-lv="0">人</span></td><td>下書きのまま確定（直しなし）。<a href="confirm.html">確定の画面</a></td><td><span class="tag ok">済</span></td></tr>
-                <tr><td>5 決裁への入力</td><td><span class="tag rpa">RPA</span></td><td><span class="lv" data-lv="1">可否</span></td><td>入力・保存・読み戻し 12 / 12 一致。操作の記録（画面の写し 9 枚）あり</td><td><span class="tag wait">可否待ち</span></td></tr>
-                <tr><td>6 承認</td><td><span class="tag human">② 例示 次郎</span></td><td><span class="lv" data-lv="0">人</span></td><td><a href="approve.html">承認の材料</a></td><td><span class="tag plain">これから</span></td></tr>
-                <tr id="order"><td>7 発注</td><td><span class="tag ai">AI</span></td><td><span class="lv" data-lv="2">作成</span> <span class="lv" data-lv="1">送付</span></td><td>注文書（Excel と PDF）を作り、送付は人の可否のあと。納期を確かめる</td><td><span class="tag plain">これから</span></td></tr>
-                <tr><td>8 納品と検収</td><td><span class="tag human">④ 見本 花子</span></td><td><span class="lv" data-lv="0">人</span></td><td><a href="receive.html">受け取りの確認</a></td><td><span class="tag plain">これから</span></td></tr>
-                <tr><td>9 請求と支払</td><td><span class="tag ai">AI</span></td><td><span class="lv" data-lv="2">差分なし</span> <span class="lv" data-lv="1">差分あり</span></td><td><a href="reconcile.html">突合</a>、支払決裁の起案。支払の承認は ②</td><td><span class="tag plain">これから</span></td></tr>
-                <tr><td>10 格納と記録</td><td><span class="tag ai">AI</span></td><td><span class="lv" data-lv="3">自動</span></td><td>注文書・PDF・承認の証跡を意思決定のフォルダへ保存</td><td><span class="tag plain">これから</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-
-      <div class="c-4 stack">
-        <section class="card">
-          <header><h2>案件</h2><span class="tag plain">R-0142</span></header>
-          <div class="body">
-            <dl class="kv">
-              <dt>依頼者</dt><dd>見本 花子（総務部）</dd>
-              <dt>承認者</dt><dd>例示 次郎 課長</dd>
-              <dt>金額</dt><dd class="num">78,320 円（税込）</dd>
-              <dt>取引先</dt><dd>見本電機（仮）</dd>
-              <dt>種類</dt><dd>物（受け取りの確認が要る）</dd>
-              <dt>受け付け</dt><dd>3 営業日前</dd>
-              <dt>使いたい日</dt><dd>来月の第 1 週</dd>
-            </dl>
-          </div>
-        </section>
-        <section class="card">
-          <header><h2>止める・戻す</h2></header>
-          <div class="body stack-s small">
-            <p class="muted">「止められる」段階の工程は、記録を見ていつでも止められます。止めた工程は理由を添えて例外の待ち行列へ回ります。</p>
-            <div class="row"><button class="btn small" type="button" data-done="案件を止めました（見本）">この案件を止める</button><a class="btn small" href="exceptions.html">例外の待ち行列</a></div>
-          </div>
-        </section>
-        <section class="card">
-          <header><h2>知らせ</h2></header>
-          <div class="body">
-            <ul class="log">
-              <li><time>9:50</time><div class="what"><span>可否待ちを 見本 花子 へ知らせた</span><span class="why">期限まで 1 営業日</span></div></li>
-            </ul>
-          </div>
-        </section>
-      </div>
+  <details class="fold">
+    <summary>根拠を見る</summary>
+    <div class="body">
+      <section id="rpa">
+        <h3>読み戻し</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>項目</th><th>確定した申請</th><th>読み戻した値</th></tr></thead>
+            <tbody>
+              <tr><td>件名</td><td>第 3 会議室用ディスプレイ及び壁掛け金具の購入</td><td>同じ</td></tr>
+              <tr><td>金額</td><td class="num">78,320 円</td><td class="num">78,320 円</td></tr>
+              <tr><td>予算</td><td>X-000-01</td><td>X-000-01</td></tr>
+              <tr><td>承認者</td><td>例示 次郎 課長</td><td>例示 次郎 課長</td></tr>
+              <tr><td colspan="3" class="small muted">ほか 8 項目も一致。同じ件の二重の起案なし</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
-  </div>
+  </details>
+
+  <section class="card" id="log">
+    <h2>記録</h2>
+    <ul class="log">
+      <li><time>済</time><span>1 受け付け — AI。予算を聞き返した。<a href="request.html">会話</a></span></li>
+      <li><time>済</time><span>2 見積 — AI。3 社へ依頼し、3 通を比べた。<a href="confirm.html#quotes">比較</a></span></li>
+      <li><time>済</time><span>3 申請の準備 — AI。下書きと承認の流れ。<a href="confirm.html#draft">下書き</a></span></li>
+      <li><time>済</time><span>4 申請の確定 — 見本 花子。直しなし</span></li>
+      <li><time>いま</time><span>5 決裁への入力 — RPA。送る前の可を待つ</span></li>
+      <li><time>これから</time><span>6 承認 — 例示 次郎。<a href="approve.html">承認</a></span></li>
+      <li><time>これから</time><span>7 発注 — AI。注文書を作り、送る前に可を待つ</span></li>
+      <li><time>これから</time><span>8 受け取り — 見本 花子。<a href="receive.html">受け取り</a></span></li>
+      <li><time>これから</time><span>9 支払 — AI が突合し、例示 次郎 が承認。<a href="pay.html">支払</a></span></li>
+      <li><time>これから</time><span>10 格納 — 自動。注文書と承認の証跡を保存</span></li>
+    </ul>
+  </section>
 </main>
-</div>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

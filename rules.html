@@ -4,91 +4,77 @@
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ルールと監査｜購入の依頼と決裁（見本）</title>
+<title>任せる範囲｜購入の依頼と決裁（見本）</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-who="例示 五郎（規程・監査の担当）">
-<div class="shell">
-<aside class="side" data-shell-sidebar></aside>
-<div>
+<body data-who="例示 五郎（総務部）">
 <header class="top" data-shell-header></header>
 <main class="main">
-  <div class="page-head">
-    <div>
-      <h1>ルールと監査 <span class="tag human">③ ルールを決め、監査する</span></h1>
-      <p>工程ごとに AI・RPA に任せる段階を決め、記録を抜き取りで確かめます（月ごと）。広げる条件を満たしたかは記録から機械が判定し、上げるかはここで人が決めます。</p>
+  <section class="decide">
+    <h1>見積の依頼を、人の可否なしで進めますか</h1>
+    <dl class="facts">
+      <dt>何を</dt><dd>登録済みの取引先への見積の依頼</dd>
+      <dt>変更</dt><dd>人が可否を出す → AI が送り、人は記録で止める</dd>
+      <dt>なぜ</dt><dd>連続 20 件を直しなしで通った</dd>
+    </dl>
+    <p class="verdict"><b>問題なし</b><span>広げる条件を全て満たした</span></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-done="1 段上げました。事故か直しが 1 件あれば自動で戻ります（見本）">上げる</button>
+      <button class="btn" type="button" data-done="見送りました（見本）">見送る</button>
     </div>
-    <div class="legend">
-      <span class="lv" data-lv="0">人</span><span class="lv" data-lv="1">可否</span><span class="lv" data-lv="2">止められる</span><span class="lv" data-lv="3">自動</span>
-    </div>
-  </div>
+  </section>
 
-  <div class="stack">
-    <section class="card">
-      <header><h2>工程ごとの任せる段階と、広げる条件の達成</h2><span class="sub">条件: 連続 20 件を直しなし・読み戻しの一致 100%・規程に反する件 0・差分の見落とし 0</span></header>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>工程</th><th>いまの段階</th><th>広げる先</th><th>連続の件数</th><th>ほかの条件</th><th>判定</th></tr></thead>
-          <tbody>
-            <tr><td>依頼の受け付け・聞き返し</td><td><span class="lv" data-lv="2">止められる</span></td><td><span class="lv" data-lv="3">自動</span></td><td><div class="stack-s"><span class="small num">20 / 20</span><div class="meter full"><i style="width: 100%"></i></div></div></td><td class="small">規程の外 0</td><td><div class="stack-s"><span class="tag ok">条件を満たした</span><button class="btn small primary" type="button" data-done="自動に上げました（見本）">上げる</button></div></td></tr>
-            <tr><td>見積の依頼（既存の取引先）</td><td><span class="lv" data-lv="1">可否</span></td><td><span class="lv" data-lv="2">止められる</span></td><td><div class="stack-s"><span class="small num">20 / 20</span><div class="meter full"><i style="width: 100%"></i></div></div></td><td class="small">規程の外 0</td><td><div class="stack-s"><span class="tag ok">条件を満たした</span><button class="btn small primary" type="button" data-done="止められる段階に上げました（見本）">上げる</button></div></td></tr>
-            <tr><td>共通IT決裁への入力（RPA）</td><td><span class="lv" data-lv="1">可否</span></td><td><span class="lv" data-lv="2">止められる</span></td><td><div class="stack-s"><span class="small num">14 / 20</span><div class="meter"><i style="width: 70%"></i></div></div></td><td class="small">読み戻し 100%・規程の外 0</td><td><span class="tag plain">あと 6 件</span></td></tr>
-            <tr><td>注文書の送付</td><td><span class="lv" data-lv="1">可否</span></td><td><span class="lv" data-lv="2">止められる</span></td><td><div class="stack-s"><span class="small num">3 / 20</span><div class="meter"><i style="width: 15%"></i></div></div></td><td class="small">規程の外 0</td><td><span class="tag wait">直し 1 件で戻った</span></td></tr>
-            <tr><td>請求の突合（差分なし）</td><td><span class="lv" data-lv="2">止められる</span></td><td><span class="lv" data-lv="3">自動</span></td><td><div class="stack-s"><span class="small num">11 / 20</span><div class="meter"><i style="width: 55%"></i></div></div></td><td class="small">規程の外 0・見落とし 0</td><td><span class="tag plain">あと 9 件</span></td></tr>
-            <tr><td>支払決裁の起案</td><td><span class="lv" data-lv="2">止められる</span></td><td><span class="lv" data-lv="3">自動</span></td><td><div class="stack-s"><span class="small num">9 / 20</span><div class="meter"><i style="width: 45%"></i></div></div></td><td class="small">規程の外 0</td><td><span class="tag plain">あと 11 件</span></td></tr>
-            <tr><td>格納と記録</td><td><span class="lv" data-lv="3">自動</span></td><td>—</td><td>—</td><td class="small">—</td><td><span class="tag plain">最初から自動</span></td></tr>
-            <tr><td>申請の確定・承認・検収（物）・新規の取引先</td><td><span class="lv" data-lv="0">人</span></td><td>—</td><td colspan="3" class="small muted">人に残す役割（① ② ④ と ③）。任せる段階は上げられません</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <footer class="small muted">戻す条件: 1 件でも事故・直しがあれば、その工程は自動で 1 段階戻り、連続の件数は 0 から数え直します。</footer>
-    </section>
-
-    <div class="grid">
-      <section class="card c-6">
-        <header><h2>抜き取りの記録（今月）</h2><button class="btn small" type="button" data-done="AI が 5 件を無作為に選びました（見本）">5 件を選ぶ</button></header>
+  <details class="fold">
+    <summary>根拠を見る</summary>
+    <div class="body">
+      <section>
+        <h3>条件</h3>
+        <ul class="checks">
+          <li>連続 20 / 20 件を直しなし</li>
+          <li>規程に反する件 0</li>
+          <li>差の見落とし 0</li>
+        </ul>
+      </section>
+      <section>
+        <h3>工程ごとの段階</h3>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>案件</th><th>見た所</th><th>結果</th></tr></thead>
+            <thead><tr><th>工程</th><th>いま</th><th>連続</th><th>判定</th></tr></thead>
             <tbody>
-              <tr><td>R-0133</td><td>突合と支払の起案</td><td><span class="tag ok">問題なし</span></td></tr>
-              <tr><td>R-0124</td><td>見積の比較と選定</td><td><span class="tag ok">問題なし</span></td></tr>
-              <tr><td>R-0118</td><td>決裁への入力の操作の記録</td><td><span class="tag ok">問題なし</span></td></tr>
-              <tr><td>R-0112</td><td>注文書の送付</td><td><span class="tag wait">宛先の部署名の誤り・直した</span></td></tr>
+              <tr><td>依頼の受け付け</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">20 / 20</td><td>上げられる</td></tr>
+              <tr><td>見積の依頼</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">20 / 20</td><td>上げられる</td></tr>
+              <tr><td>決裁への入力</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">14 / 20</td><td>あと 6 件</td></tr>
+              <tr class="diff"><td>注文書の送付</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">3 / 20</td><td>直し 1 件で戻った</td></tr>
+              <tr><td>請求の突合</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">11 / 20</td><td>あと 9 件</td></tr>
+              <tr><td>支払の下書き</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">9 / 20</td><td>あと 11 件</td></tr>
+              <tr><td>格納</td><td><span class="lv" data-lv="3">自動</span></td><td class="num">—</td><td>—</td></tr>
+              <tr><td>確定・承認・受け取り</td><td><span class="lv" data-lv="0">人</span></td><td class="num">—</td><td>上げない</td></tr>
             </tbody>
           </table>
         </div>
       </section>
-
-      <section class="card c-6">
-        <header><h2>ルール</h2><span class="sub">ここで決めた値で AI・RPA が動きます</span></header>
-        <div class="body">
-          <dl class="kv">
-            <dt>対象</dt><dd>カタログ外・10 万円以下・BP コードあり</dd>
-            <dt>決裁の権限</dt><dd>10 万円以下の物品は課長（権限の規程・見本）</dd>
-            <dt>相見積</dt><dd>2 社以上</dd>
-            <dt>人に戻す例外</dt><dd>様式の指定・検収 NG・金額の差・新規の取引先・読み取りの自信が低い・取り下げ</dd>
-            <dt>金額の差の基準</dt><dd>見積と請求の差が 1 円でもあれば戻す（当面）</dd>
-            <dt>AI の権限</dt><dd>承認の操作はできない</dd>
-          </dl>
-        </div>
-        <footer class="row"><button class="btn small" type="button" data-done="見本のため変更はされません">ルールを変える</button><span class="small muted">変えた履歴は全て残ります</span></footer>
+      <section>
+        <h3>抜き取り</h3>
+        <ul class="checks">
+          <li>R-0133 突合と支払の下書き: 問題なし</li>
+          <li>R-0124 見積の比較: 問題なし</li>
+          <li>R-0118 決裁への入力の記録: 問題なし</li>
+          <li class="w">R-0112 注文書の送付: 宛先の部署名の誤り（直した）</li>
+        </ul>
       </section>
-
-      <section class="card c-12">
-        <header><h2>異常の知らせ</h2><span class="sub">読み戻しの不一致・規程の外・急な件数の変化</span></header>
-        <div class="body">
-          <ul class="log">
-            <li><time>3 日前</time><div class="what"><span>注文書の送付で直し 1 件 → 段階を「止められる」から「可否」へ自動で戻した</span><span class="why">根拠: R-0112 の宛先の直し</span></div></li>
-            <li><time>先週</time><div class="what"><span>今週の依頼の件数がふだんの 2 倍</span><span class="why">期末の消耗品の依頼が集中。規程の外は 0 件</span></div></li>
-          </ul>
-        </div>
+      <section>
+        <h3>ルール</h3>
+        <dl class="kv">
+          <dt>対象</dt><dd>カタログ外・10 万円以下・登録済みの取引先</dd>
+          <dt>決裁の権限</dt><dd>10 万円以下の物品は課長</dd>
+          <dt>相見積</dt><dd>2 社以上</dd>
+          <dt>人に戻す例外</dt><dd>様式の指定・受け取りの違い・金額の差・新規の取引先・読み取りの自信が低い</dd>
+          <dt>AI の権限</dt><dd>承認の操作はできない</dd>
+        </dl>
       </section>
     </div>
-  </div>
+  </details>
 </main>
-</div>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

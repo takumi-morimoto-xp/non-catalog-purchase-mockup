@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全画面の一覧と見方｜購入の依頼と決裁（見本）</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top" data-shell-header></header>
+<main class="main wide">
+  <div class="stack">
+    <p class="small"><a href="index.html">← 入口</a></p>
+    <h1>全画面の一覧と見方</h1>
+    <p class="muted">カタログ外購入（10 万円以下）の To-Be の見本です。依頼から支払まで AI と RPA が進め、人は 4 つのことだけを決めます。動く仕組みは無く、ボタンを押しても何も記録されません。データは全て作り物です。</p>
+  </div>
+
+  <section class="card">
+    <h2>画面の作り</h2>
+    <ul>
+      <li>1 画面で 1 つだけ決めます。最初に見えるのは、問い・要点 3 行（何を・いくら・なぜ）・AI の判定・ボタン 2 つ（主と副）だけです。</li>
+      <li>見積・規程との照合・似た案件・AI と RPA の記録は「根拠を見る」に畳んであります。差や問題がある項目だけ、最初から開いて色を付けます。</li>
+      <li>色は「要確認」（黄）と「期限切れ・異常」（赤）だけに使います。</li>
+      <li>画面の上の「いま 6/10 承認・次は …」を押すと、案件の 10 段が開きます。</li>
+      <li>スマートフォンの幅では、ボタンを画面の下に留め、開いてすぐ押せるようにしています。</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>画面の一覧</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>画面</th><th>使う人</th><th>決めること</th><th>見せる要件</th></tr></thead>
+        <tbody>
+          <tr><td><a href="request.html">依頼</a></td><td>依頼する人</td><td>何を買うか（会話で伝える）</td><td>F1・F12・F11</td></tr>
+          <tr><td><a href="confirm.html">申請の確定</a></td><td>依頼する人（H1）</td><td>この内容で申請するか</td><td>F13・F2・F3・F14</td></tr>
+          <tr><td><a href="case.html">案件の記録</a></td><td>依頼する人・全員</td><td>決裁へ申請を送るか（読み戻しの後）</td><td>F4・F11・F15・F18</td></tr>
+          <tr><td><a href="approve.html">購入の承認</a></td><td>承認する人（H2）</td><td>この購入を承認するか</td><td>F14・N1</td></tr>
+          <tr><td><a href="receive.html">受け取り</a></td><td>受け取る人（H4）</td><td>届いた物は注文どおりか</td><td>F6</td></tr>
+          <tr><td><a href="pay.html">支払の承認</a></td><td>承認する人（H2）</td><td>この支払を承認するか</td><td>F7・F8</td></tr>
+          <tr><td><a href="reconcile.html">請求の差</a></td><td>承認する人（H2）</td><td>請求の差をどうするか</td><td>F7・F16</td></tr>
+          <tr><td><a href="exceptions.html">例外</a></td><td>承認する人（H2）</td><td>AI が解けなかった件をどうするか</td><td>F10・F13</td></tr>
+          <tr><td><a href="cases.html">案件の一覧</a></td><td>総務の人</td><td>止まった案件を見つける</td><td>F15</td></tr>
+          <tr><td><a href="rules.html">任せる範囲</a></td><td>総務の人（H3）</td><td>工程を AI に任せる段階を上げるか</td><td>F17・F18</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">役務・サービスの購入では受け取りの確認は無く、AI が納品書と注文書を照合します。</p>
+  </section>
+
+  <section class="card">
+    <h2>人に残る 4 つの役割</h2>
+    <dl class="kv">
+      <dt>H1 依頼する人</dt><dd>何を決裁してほしいかを決める（申請の確定）</dd>
+      <dt>H2 承認する人</dt><dd>承認して問題ないかを決める（承認・支払の承認・差と例外の判断）</dd>
+      <dt>H3 総務の人</dt><dd>ルールを決め、記録を抜き取りで確かめ、任せる範囲を広げるかを決める（月ごと）</dd>
+      <dt>H4 受け取る人</dt><dd>物を受け取ったことを確かめる（物の購入のとき）</dd>
+    </dl>
+  </section>
+
+  <section class="card">
+    <h2>任せる段階</h2>
+    <dl class="kv">
+      <dt><span class="lv" data-lv="0">人</span></dt><dd>人が決める（任せない）</dd>
+      <dt><span class="lv" data-lv="1">可否</span></dt><dd>人が可否を出してから AI・RPA が実行する</dd>
+      <dt><span class="lv" data-lv="2">止められる</span></dt><dd>AI・RPA が実行し、人は記録を見て止められる</dd>
+      <dt><span class="lv" data-lv="3">自動</span></dt><dd>自動。監査で見るだけ</dd>
+    </dl>
+    <p class="small muted">同じ工程で連続 20 件を直しなしで通すと、1 段上げる候補になります（上げるかは総務の人が決める）。1 件でも事故・直しがあれば、その工程は自動で 1 段戻ります。</p>
+  </section>
+
+  <section class="card">
+    <h2>案件の 10 段</h2>
+    <ol>
+      <li>受け付け（AI）</li><li>見積（AI。送る前に人の可否）</li><li>申請の準備（AI）</li><li>申請の確定（人）</li>
+      <li>決裁への入力（RPA。送る前に人の可否）</li><li>承認（人）</li><li>発注（AI）</li><li>受け取り（人。物のとき）</li>
+      <li>請求の突合と支払（AI が突合し、人が支払を承認）</li><li>格納と記録（自動）</li>
+    </ol>
+  </section>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

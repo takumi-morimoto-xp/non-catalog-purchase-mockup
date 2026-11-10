@@ -4,75 +4,36 @@
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>受け取りの確認｜購入の依頼と決裁（見本）</title>
+<title>受け取り｜購入の依頼と決裁（見本）</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-who="見本 花子（総務部）">
-<div class="shell">
-<aside class="side" data-shell-sidebar></aside>
-<div>
 <header class="top" data-shell-header></header>
 <main class="main">
-  <div class="page-head">
-    <div>
-      <h1>受け取りの確認 <span class="tag human">④ 物を受け取ったことを確かめる</span></h1>
-      <p>届いた物が注文どおりかを見て、1 操作か写真で返します。スマートフォンから開く前提の画面です。役務・サービスの購入ではこの確認はなく、AI が納品書と注文書を照合します。</p>
+  <div data-stage="8"></div>
+
+  <section class="decide">
+    <h1>届いた物は注文どおりですか</h1>
+    <dl class="facts">
+      <dt>何が</dt><dd>ディスプレイ 50 型 ×2、壁掛け金具 ×2</dd>
+      <dt>どこへ</dt><dd>第 3 会議室<small>R-0142</small></dd>
+      <dt>誰から</dt><dd>見本電機（仮）<small>納品書 D-0031</small></dd>
+    </dl>
+    <p class="verdict"><b>問題なし</b><span>納品書の品目と数は注文と一致</span></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-done="受け取りを記録しました。請求書を待ちます（見本）">注文どおり</button>
+      <button class="btn" type="button" data-done="違いを受け付けました。写真か理由を添えて承認者へ回します（見本）">違う・壊れている</button>
     </div>
-    <span class="lv" data-lv="0">検収（物）: 人が決める</span>
-  </div>
+  </section>
 
-  <div class="stack">
-    <div data-flow="8"></div>
-
-    <div class="grid">
-      <div class="c-6">
-        <div class="phone">
-          <div class="bar">受け取りの確認</div>
-          <div class="inner">
-            <div class="note">R-0142 の品が届きました（納品書 D-0031 を AI が読み取り済み）。注文どおりか確かめてください。</div>
-            <table>
-              <thead><tr><th>品目</th><th class="num">注文</th><th class="num">納品書</th></tr></thead>
-              <tbody>
-                <tr><td>ディスプレイ 50 型</td><td class="num">2</td><td class="num">2</td></tr>
-                <tr><td>壁掛け金具</td><td class="num">2</td><td class="num">2</td></tr>
-              </tbody>
-            </table>
-            <button class="btn primary" type="button" data-done="受け取りを記録しました。請求書を待ちます（見本）">注文どおり受け取った</button>
-            <button class="btn" type="button" data-done="写真を受け付けました。AI が品目と数を読み取ります（見本）">写真を撮って返す</button>
-            <button class="btn danger" type="button" data-done="違いを受け付けました。理由を添えて承認者へ回します（見本）">注文と違う・壊れている</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="c-6 stack">
-        <section class="card">
-          <header><h2>写真で返すとき</h2><span class="tag ai">AI が読み取る</span></header>
-          <div class="body grid">
-            <div class="c-6 photo">箱の写真（見本）</div>
-            <div class="c-6 stack-s small">
-              <span class="src ai">品目: ディスプレイ 50 型 ×2</span>
-              <span class="src ai">品目: 壁掛け金具 ×2</span>
-              <span class="src ai">外装の傷: 見当たらない</span>
-              <p class="muted">読み取りの自信が低いときは、受け取った人に 1 問だけ聞き返します。</p>
-            </div>
-          </div>
-        </section>
-        <section class="card">
-          <header><h2>このあと AI・RPA がすること</h2></header>
-          <div class="body">
-            <ul class="log">
-              <li><time>受取後</time><div class="what"><span>検収の記録を作り、注文書・決裁と照合</span><span class="lv" data-lv="2">止められる</span></div></li>
-              <li><time>請求時</time><div class="what"><span>請求書を読み、注文書・検収と突合</span><span class="lv" data-lv="2">差分なし</span></div></li>
-              <li><time>違い</time><div class="what"><span>違いがあれば取引先へ問い合わせ、解けなければ承認者へ</span><span class="why">検収 NG は例外の待ち行列へ</span></div></li>
-            </ul>
-          </div>
-        </section>
-      </div>
+  <details class="fold">
+    <summary>写真で返す</summary>
+    <div class="body">
+      <div class="photo">箱の写真（見本）</div>
+      <p class="small muted">AI が品目と数を読み取ります。自信が低いときは 1 問だけ聞き返します。</p>
     </div>
-  </div>
+  </details>
 </main>
-</div>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

@@ -4,147 +4,81 @@
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>承認の材料｜購入の依頼と決裁（見本）</title>
+<title>購入の承認｜購入の依頼と決裁（見本）</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-who="例示 次郎（総務部 課長）">
-<div class="shell">
-<aside class="side" data-shell-sidebar></aside>
-<div>
 <header class="top" data-shell-header></header>
 <main class="main">
-  <div class="page-head">
-    <div>
-      <h1>承認の材料 <span class="tag human">② 承認して問題ないかを決める</span></h1>
-      <p>AI が揃えた材料を 1 画面で見て、可否を出します。承認の操作は人だけができます（AI に承認の権限はありません）。</p>
+  <div data-stage="6"></div>
+
+  <section class="decide">
+    <h1>この購入を承認しますか</h1>
+    <dl class="facts">
+      <dt>何を</dt><dd>会議室のディスプレイ 2 台と壁掛け金具</dd>
+      <dt>いくら</dt><dd class="num">78,320 円<small>見本電機（仮）</small></dd>
+      <dt>なぜ</dt><dd>第 3 会議室で来月から画面を共有する</dd>
+    </dl>
+    <p class="verdict warn"><b>要確認</b><span>情報機器のため、資産の登録が要るか規程で決まらない</span></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-done="承認しました。発注へ進みます（見本）">承認する</button>
+      <button class="btn" type="button" data-done="差し戻しました。理由と、否認にするかを選びます（見本）">差し戻す</button>
     </div>
-    <span class="lv" data-lv="0">承認: 人が決める</span>
-  </div>
+  </section>
 
-  <div class="stack">
-    <div data-flow="6"></div>
-
-    <section class="card">
-      <div class="tabs" data-tabs="kind" role="tablist">
-        <button type="button" data-tab="buy" aria-selected="true">購入の承認（段 6）</button>
-        <button type="button" data-tab="pay" aria-selected="false">支払の承認（段 9）</button>
-      </div>
-
-      <div data-panel="kind:buy" class="body">
-        <div class="grid">
-          <div class="c-8 stack">
-            <div class="stack-s">
-              <span class="small muted">要約（AI）</span>
-              <p><b>第 3 会議室にディスプレイ 2 台と壁掛け金具を、見本電機（仮）から 78,320 円で買う申請です。</b>相見積 3 社の最安で、納期は使いたい日に間に合います。規程・予算に外れはありません。情報機器のため、資産の登録が要るかだけ確かめてください。</p>
-            </div>
-
-            <div class="grid">
-              <section class="c-6 stack-s">
-                <b>規程との照合</b>
-                <ul class="checks small">
-                  <li><span class="mark">✓</span><span>10 万円以下の物品: 課長の決裁で足りる（権限の規程・見本）</span></li>
-                  <li><span class="mark">✓</span><span>予算 X-000-01 の残り 412,000 円で足りる</span></li>
-                  <li><span class="mark">✓</span><span>取引先は BP コードあり（新規ではない）</span></li>
-                  <li><span class="mark">✓</span><span>相見積 3 社（2 社以上の基準を満たす）</span></li>
-                  <li><span class="mark w">!</span><span>情報機器: 資産の登録の要否は規程から決まらない</span></li>
-                </ul>
-              </section>
-              <section class="c-6 stack-s">
-                <b>リスク</b>
-                <ul class="checks small">
-                  <li><span class="mark">✓</span><span>新規の取引先: なし</span></li>
-                  <li><span class="mark">✓</span><span>金額の差: 似た案件の中央値より 6% 安い</span></li>
-                  <li><span class="mark">✓</span><span>納期: 使いたい日の 3 営業日前に届く見込み</span></li>
-                  <li><span class="mark w">!</span><span>壁掛けの工事: 金具は工事不要の型。設置は総務で行う前提</span></li>
-                </ul>
-              </section>
-            </div>
-
-            <section class="stack-s">
-              <b>根拠</b>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>資料</th><th>使った所</th><th>読み取りの自信</th></tr></thead>
-                  <tbody>
-                    <tr><td>見積 Q-0007（見本電機・仮）</td><td>金額・納期・品番</td><td><span class="tag ok">高い</span></td></tr>
-                    <tr><td>見積 Q-0008・Q-0009</td><td>比較</td><td><span class="tag ok">高い</span></td></tr>
-                    <tr><td>予算の残高（共用設備）</td><td>予算の照合</td><td><span class="tag ok">照会の値</span></td></tr>
-                    <tr><td>依頼の会話（R-0142）</td><td>目的・使う所・使いたい日</td><td><span class="tag ok">依頼者が確定</span></td></tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-
-            <section class="stack-s">
-              <b>過去の似た案件</b>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>案件</th><th>品目</th><th class="num">金額</th><th>結果</th></tr></thead>
-                  <tbody>
-                    <tr><td>R-0098</td><td>第 1 会議室 ディスプレイ 1 台</td><td class="num">41,800 円</td><td>承認・問題なし</td></tr>
-                    <tr><td>R-0061</td><td>応接室 ディスプレイと金具</td><td class="num">52,300 円</td><td>承認・資産の登録なし</td></tr>
-                    <tr><td>R-0017</td><td>研修室 プロジェクター</td><td class="num">96,800 円</td><td>差し戻し・相見積が 1 社</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
-
-          <div class="c-4 stack">
-            <section class="decide">
-              <span class="label">あなたが決めること</span>
-              <h2>この購入を承認しますか</h2>
-              <p>承認すると、AI が注文書を作り、送付の可否をあなたに聞いてから取引先へ送ります。</p>
-              <div class="actions">
-                <button class="btn primary big" type="button" data-done="承認しました。注文書の作成へ進みます（見本）">承認する</button>
-                <button class="btn" type="button" data-done="差し戻しました。理由を依頼者へ伝えます（見本）">差し戻す</button>
-                <button class="btn danger" type="button" data-done="否認しました（見本）">否認する</button>
-              </div>
-            </section>
-            <section class="card">
-              <header><h2>申請</h2><a class="small" href="case.html">案件の記録 →</a></header>
-              <div class="body">
-                <dl class="kv">
-                  <dt>案件</dt><dd>R-0142</dd>
-                  <dt>依頼者</dt><dd>見本 花子（総務部）</dd>
-                  <dt>金額</dt><dd class="num">78,320 円（税込）</dd>
-                  <dt>取引先</dt><dd>見本電機（仮）</dd>
-                  <dt>決裁への入力</dt><dd>RPA・読み戻し 12 / 12 一致</dd>
-                </dl>
-              </div>
-            </section>
-          </div>
+  <details class="fold">
+    <summary>根拠を見る</summary>
+    <div class="body">
+      <section>
+        <h3>規程</h3>
+        <ul class="checks">
+          <li class="w">資産の登録の要否は規程から決まらない。似た R-0061 は登録なし</li>
+          <li>10 万円以下の物品は課長の決裁で足りる</li>
+          <li>予算 X-000-01 の残り 412,000 円で足りる</li>
+          <li>取引先は登録済み（新規ではない）</li>
+          <li>相見積 3 社（基準は 2 社以上）</li>
+          <li>金額は似た案件の中央値より 6% 安い</li>
+          <li>納期は使いたい日の 3 営業日前</li>
+        </ul>
+      </section>
+      <section id="quotes">
+        <h3>見積</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>取引先</th><th class="num">金額</th><th>納期</th><th>保証</th></tr></thead>
+            <tbody>
+              <tr><td>見本電機（仮）・選んだ</td><td class="num">78,320 円</td><td>7 営業日</td><td>3 年</td></tr>
+              <tr><td>例示テック（仮）</td><td class="num">81,950 円</td><td>5 営業日</td><td>1 年</td></tr>
+              <tr><td>サンプル商会（仮）</td><td class="num">84,700 円</td><td>10 営業日</td><td>3 年</td></tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-
-      <div data-panel="kind:pay" class="body" id="pay" hidden>
-        <div class="grid">
-          <div class="c-8 stack-s">
-            <span class="small muted">要約（AI）</span>
-            <p><b>R-0142 の支払 78,320 円の決裁です。</b>請求書・注文書・検収の 3 つが全ての項目で一致しました（差分なし）。支払は承認の時に今の仕組みで自動で実行されます。</p>
-            <ul class="checks small">
-              <li><span class="mark">✓</span><span>請求書・注文書・検収: 差分なし（<a href="reconcile.html">突合の確認</a>）</span></li>
-              <li><span class="mark">✓</span><span>受け取りの確認: 見本 花子 が注文どおりと確認</span></li>
-              <li><span class="mark">✓</span><span>支払の期日: 月末（請求書から）</span></li>
-            </ul>
-          </div>
-          <div class="c-4">
-            <section class="decide">
-              <span class="label">あなたが決めること</span>
-              <h2>支払を承認しますか</h2>
-              <div class="actions">
-                <button class="btn primary big" type="button" data-done="支払を承認しました（見本）">承認する</button>
-                <button class="btn" type="button" data-done="差し戻しました（見本）">差し戻す</button>
-              </div>
-            </section>
-          </div>
+      </section>
+      <section>
+        <h3>似た案件</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>案件</th><th>品目</th><th class="num">金額</th><th>結果</th></tr></thead>
+            <tbody>
+              <tr><td>R-0098</td><td>ディスプレイ 1 台</td><td class="num">41,800 円</td><td>承認</td></tr>
+              <tr><td>R-0061</td><td>ディスプレイと金具</td><td class="num">52,300 円</td><td>承認・資産の登録なし</td></tr>
+              <tr><td>R-0017</td><td>プロジェクター</td><td class="num">96,800 円</td><td>差し戻し・相見積 1 社</td></tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+      <section>
+        <h3>記録</h3>
+        <ul class="log">
+          <li><time>3 日前</time><span>依頼を受け付け、予算を聞き返した</span></li>
+          <li><time>2 日前</time><span>3 社の見積を読んで比べた（見積 Q-0007〜0009）</span></li>
+          <li><time>昨日</time><span>見本 花子 が申請を確定した</span></li>
+          <li><time>今日</time><span>決裁へ入力し、読み戻し 12 / 12 が一致した。<a href="case.html">案件の記録</a></span></li>
+        </ul>
+      </section>
+    </div>
+  </details>
 </main>
-</div>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

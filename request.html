@@ -4,90 +4,53 @@
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>依頼の入力｜購入の依頼と決裁（見本）</title>
+<title>依頼｜購入の依頼と決裁（見本）</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-who="見本 花子（総務部）">
-<div class="shell">
-<aside class="side" data-shell-sidebar></aside>
-<div>
 <header class="top" data-shell-header></header>
 <main class="main">
-  <div class="page-head">
-    <div>
-      <h1>依頼の入力</h1>
-      <p>買いたい物を話しかけるように伝えます。足りない項目は AI が聞き返します。様式への記入やメールでの送付はありません。</p>
+  <div data-stage="1"></div>
+
+  <section class="decide">
+    <h1>何を買いますか</h1>
+    <div class="chat">
+      <p class="msg me">第 3 会議室にディスプレイ 2 台と壁掛け金具。来月から使いたい</p>
+      <p class="msg">予算はどれにしますか</p>
+      <p class="msg me">共用設備で</p>
+      <p class="msg">3 社に見積を頼みます。2 営業日で下書きを見せます</p>
     </div>
-    <span class="lv" data-lv="2">受け付け: AI が実行・人は記録を見て止められる</span>
-  </div>
+    <p class="verdict"><b>問題なし</b><span>必須の項目は全て埋まった</span></p>
+    <div class="composer">
+      <input type="text" placeholder="例: 来客用の椅子を 4 脚、今月中に" aria-label="依頼の文">
+      <button class="btn primary" type="button" data-done="見本のため送信はされません">送る</button>
+    </div>
+  </section>
 
-  <div class="stack">
-    <div data-flow="1"></div>
-
-    <div class="grid">
-      <section class="card c-8">
-        <header><h2>新しい依頼</h2><span class="sub">案件 R-0142 として受け付けました</span></header>
-        <div class="chat">
-          <div class="msg me">
-            <div class="bubble">第 3 会議室にディスプレイを 2 台置きたいです。壁に掛ける金具も一緒に。来月の初めには使いたいです。</div>
-            <div class="meta">10:02</div>
-          </div>
-          <div class="msg">
-            <div class="bubble">承知しました。カタログに無い物なので、カタログ外の購入として進めます。2 つだけ教えてください。<br>1. 画面の大きさの希望はありますか。<br>2. 費用を付ける予算はどれですか。</div>
-            <div class="meta">AI・10:02</div>
-            <div class="choices">
-              <span class="tag plain">総務部 共用設備（X-000-01）</span>
-              <span class="tag plain">総務部 消耗品（X-000-02）</span>
-              <span class="tag plain">別の予算</span>
-            </div>
-          </div>
-          <div class="msg me">
-            <div class="bubble">50 インチ前後で。予算は共用設備でお願いします。</div>
-            <div class="meta">10:04</div>
-          </div>
-          <div class="msg">
-            <div class="bubble">ありがとうございます。設置の工事が要らない壁掛け金具を前提に、いつもの取引先 3 社へ見積を頼みます。<br>見積が揃ったら、申請の下書きをお見せします（目安: 2 営業日）。</div>
-            <div class="meta">AI・10:04</div>
-          </div>
-        </div>
-        <div class="composer">
-          <input type="text" placeholder="例: 来客用の椅子を 4 脚、今月中に" aria-label="依頼の文">
-          <button class="btn primary" type="button" data-done="見本のため送信はされません">送る</button>
-        </div>
+  <details class="fold">
+    <summary>根拠を見る</summary>
+    <div class="body">
+      <section>
+        <h3>項目</h3>
+        <dl class="kv">
+          <dt>品目</dt><dd>ディスプレイ 50 型前後 ×2、壁掛け金具 ×2（会話から）</dd>
+          <dt>使う所</dt><dd>第 3 会議室（会話から）</dd>
+          <dt>使いたい日</dt><dd>来月の第 1 週（会話から日付に直した）</dd>
+          <dt>予算</dt><dd>総務部 共用設備 X-000-01（聞き返して確定）</dd>
+          <dt>取引先</dt><dd>見積のあとに決める</dd>
+        </dl>
       </section>
-
-      <div class="c-4 stack">
-        <section class="card">
-          <header><h2>依頼の項目</h2><span class="tag ai">AI が埋めた</span></header>
-          <div class="body">
-            <dl class="kv">
-              <dt>品目</dt><dd>ディスプレイ 50 型前後 ×2、壁掛け金具 ×2<br><span class="src ai">会話から</span></dd>
-              <dt>使う所</dt><dd>第 3 会議室<br><span class="src ai">会話から</span></dd>
-              <dt>使いたい日</dt><dd>来月の第 1 週<br><span class="src ai">会話から（日付に直した）</span></dd>
-              <dt>予算</dt><dd>総務部 共用設備（X-000-01）<br><span class="src human">聞き返して確定</span></dd>
-              <dt>依頼元コード</dt><dd>総務部（見本）<br><span class="src ai">依頼者の所属から</span></dd>
-              <dt>取引先</dt><dd>見積のあとに決める<br><span class="src">段 2 で埋まる</span></dd>
-            </dl>
-          </div>
-          <div class="body small muted">必須の項目は全て埋まりました。足りない項目があれば、ここに赤で出し、チャットで聞き返します。</div>
-        </section>
-
-        <section class="card">
-          <header><h2>AI がしたこと</h2><span class="sub">根拠つき</span></header>
-          <div class="body">
-            <ul class="log">
-              <li><time>10:02</time><div class="what"><span>カタログを探した: 該当なし</span><span class="why">根拠: 購入カタログの品目一覧（見本）</span></div></li>
-              <li><time>10:02</time><div class="what"><span>カタログ外・10 万円以下の見込みと判定</span><span class="why">根拠: 似た案件 3 件の金額の幅</span></div></li>
-              <li><time>10:04</time><div class="what"><span>見積の依頼の文を作成</span><span class="why">送る前に人の可否を待つ（段階 1）</span></div></li>
-            </ul>
-          </div>
-        </section>
-      </div>
+      <section>
+        <h3>記録</h3>
+        <ul class="log">
+          <li><time>10:02</time><span>カタログを探した: 該当なし</span></li>
+          <li><time>10:02</time><span>カタログ外・10 万円以下の見込み（似た案件 3 件の金額から）</span></li>
+          <li><time>10:04</time><span>見積の依頼の文を作った。送る前に 見本 花子 の可を待つ</span></li>
+        </ul>
+      </section>
     </div>
-  </div>
+  </details>
 </main>
-</div>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

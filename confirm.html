@@ -4,108 +4,67 @@
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>申請の確認と確定｜購入の依頼と決裁（見本）</title>
+<title>申請の確定｜購入の依頼と決裁（見本）</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-who="見本 花子（総務部）">
-<div class="shell">
-<aside class="side" data-shell-sidebar></aside>
-<div>
 <header class="top" data-shell-header></header>
 <main class="main">
-  <div class="page-head">
-    <div>
-      <h1>申請の確認と確定 <span class="tag human">① 何を決裁してほしいかを決める</span></h1>
-      <p>R-0142 会議室のディスプレイ 2 台と壁掛け金具。AI が見積を集めて下書きを作りました。中身を確かめて、1 操作で申請を確定します。</p>
+  <div data-stage="4"></div>
+
+  <section class="decide">
+    <h1>この内容で申請しますか</h1>
+    <dl class="facts">
+      <dt>何を</dt><dd>会議室のディスプレイ 2 台と壁掛け金具</dd>
+      <dt>いくら</dt><dd class="num">78,320 円<small>見本電機（仮）・3 社で最安</small></dd>
+      <dt>なぜ</dt><dd>第 3 会議室で来月から画面を共有する</dd>
+    </dl>
+    <p class="verdict"><b>問題なし</b><span>規程・予算に外れなし。納期も間に合う</span></p>
+    <div class="actions">
+      <button class="btn primary" type="button" data-done="申請しました。例示 次郎 課長 へ回ります（見本）">申請する</button>
+      <a class="btn" href="#draft">下書きを直す</a>
+      <span class="after">承認は 例示 次郎 課長</span>
     </div>
-    <span class="lv" data-lv="0">申請の確定: 人が決める</span>
-  </div>
+  </section>
 
-  <div class="stack">
-    <div data-flow="4"></div>
-
-    <div class="grid">
-      <div class="c-8 stack">
-        <section class="card" id="quotes">
-          <header><h2>見積の比較（段 2）</h2><span class="row"><span class="lv" data-lv="1">送信と選定: 人が可否を出してから実行</span></span></header>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>取引先</th><th class="num">金額（税込）</th><th>納期</th><th>保証</th><th>AI の見立て</th></tr></thead>
-              <tbody>
-                <tr><td><b>見本電機（仮）</b><br><span class="small muted">BP コードあり・過去 12 件</span></td><td class="num strong">78,320 円</td><td>7 営業日</td><td>3 年</td><td><span class="tag ok">推す</span><br><span class="small muted">最安・納期が間に合う</span></td></tr>
-                <tr><td>例示テック（仮）<br><span class="small muted">BP コードあり・過去 4 件</span></td><td class="num">81,950 円</td><td>5 営業日</td><td>1 年</td><td><span class="small muted">保証が短い</span></td></tr>
-                <tr><td>サンプル商会（仮）<br><span class="small muted">BP コードあり・過去 7 件</span></td><td class="num">84,700 円</td><td>10 営業日</td><td>3 年</td><td><span class="small muted">納期が使いたい日を過ぎる</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <footer class="small muted">見積の依頼の送信は 見本 花子 が可としました（10:05）。届いた見積 3 通は AI が読み取り、項目ごとの元の箇所を記録に残しています。</footer>
-        </section>
-
-        <section class="card" id="draft">
-          <header><h2>決裁の起案の下書き（段 3）</h2><span class="row"><span class="lv" data-lv="2">下書き: AI が実行・人は記録を見て止められる</span></span></header>
-          <div class="body">
-            <dl class="kv">
-              <dt>件名</dt><dd>第 3 会議室用ディスプレイ及び壁掛け金具の購入<br><span class="src ai">依頼と見積から</span></dd>
-              <dt>目的</dt><dd>会議室の画面共有の設備を整え、持ち運びの機材の貸し借りを無くすため<br><span class="src ai">会話から文に整えた</span></dd>
-              <dt>金額</dt><dd class="num">78,320 円（税込）<br><span class="src ai">見本電機（仮）の見積 Q-0007 から</span></dd>
-              <dt>予算</dt><dd>総務部 共用設備（X-000-01）・残り 412,000 円<br><span class="src ai">予算の残高を照会</span></dd>
-              <dt>取引先</dt><dd>見本電機（仮）・BP コード 000000（見本）<br><span class="src ai">取引先の一覧から</span></dd>
-              <dt>納期</dt><dd>発注から 7 営業日<br><span class="src ai">見積から</span></dd>
-              <dt>契約事務</dt><dd>注文書による（ME の様式）<br><span class="src ai">金額と種類の規程から</span></dd>
-            </dl>
-          </div>
-          <div class="body">
-            <div class="spread"><b>承認フローと決裁者の候補</b><span class="small muted">候補を出すだけで、変えるのは人</span></div>
-            <ol class="small list">
-              <li>起案: 見本 花子（総務部）</li>
-              <li>承認: 例示 次郎 課長（総務部）— 10 万円以下の物品は課長の決裁（規程 第 X 条・見本）</li>
-              <li>合議: なし（情報機器だが 10 万円以下のため）</li>
-            </ol>
-          </div>
-        </section>
-      </div>
-
-      <div class="c-4 stack">
-        <section class="decide">
-          <span class="label">あなたが決めること（1 操作）</span>
-          <h2>この内容で申請を確定する</h2>
-          <p>確定すると、RPA が共通IT決裁へ入力して読み戻し、承認者の 例示 次郎 課長 へ回ります。確定と送信は同じ操作です。</p>
-          <div class="actions">
-            <button class="btn primary big" type="button" data-done="申請を確定しました。共通IT決裁への入力へ進みます（見本）">確定して申請する</button>
-          </div>
-          <div class="row small">
-            <a href="#draft">下書きを直す</a><span class="muted">・</span><a href="exceptions.html">取り下げる</a>
-          </div>
-        </section>
-
-        <section class="card">
-          <header><h2>承認者が見る材料</h2><a class="small" href="approve.html">全体を見る →</a></header>
-          <div class="body">
-            <ul class="checks small">
-              <li><span class="mark">✓</span><span>金額は 10 万円以下・課長の決裁で足りる</span></li>
-              <li><span class="mark">✓</span><span>予算の残りで足りる</span></li>
-              <li><span class="mark">✓</span><span>相見積 3 社・最安を選んだ</span></li>
-              <li><span class="mark w">!</span><span>情報機器: 資産の登録が要るかを承認者が確かめる</span></li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="card">
-          <header><h2>AI がしたこと</h2><span class="sub">根拠つき</span></header>
-          <div class="body">
-            <ul class="log">
-              <li><time>10:05</time><div class="what"><span>見積の依頼を 3 社へ送信</span><span class="why">可: 見本 花子（段階 1）</span></div></li>
-              <li><time>翌 9:40</time><div class="what"><span>見積 3 通を読み取り・比較</span><span class="why">根拠: 見積 Q-0007・Q-0008・Q-0009</span></div></li>
-              <li><time>翌 9:41</time><div class="what"><span>起案の下書きと決裁者の候補を作成</span><span class="why">根拠: 権限の規程（見本）・予算の残高</span></div></li>
-            </ul>
-          </div>
-        </section>
-      </div>
+  <details class="fold">
+    <summary>根拠を見る</summary>
+    <div class="body">
+      <section id="quotes">
+        <h3>見積</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>取引先</th><th class="num">金額</th><th>納期</th><th>保証</th><th>見立て</th></tr></thead>
+            <tbody>
+              <tr><td>見本電機（仮）</td><td class="num">78,320 円</td><td>7 営業日</td><td>3 年</td><td>推す・最安</td></tr>
+              <tr><td>例示テック（仮）</td><td class="num">81,950 円</td><td>5 営業日</td><td>1 年</td><td>保証が短い</td></tr>
+              <tr><td>サンプル商会（仮）</td><td class="num">84,700 円</td><td>10 営業日</td><td>3 年</td><td>納期が遅い</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="draft">
+        <h3>下書き</h3>
+        <dl class="kv">
+          <dt>件名</dt><dd>第 3 会議室用ディスプレイ及び壁掛け金具の購入</dd>
+          <dt>目的</dt><dd>会議室の画面共有の設備を整え、機材の貸し借りを無くすため</dd>
+          <dt>予算</dt><dd>総務部 共用設備（X-000-01）・残り 412,000 円</dd>
+          <dt>納期</dt><dd>発注から 7 営業日</dd>
+          <dt>契約事務</dt><dd>注文書（ME の様式）</dd>
+          <dt>承認の流れ</dt><dd>起案 見本 花子 → 承認 例示 次郎 課長（10 万円以下の物品）</dd>
+        </dl>
+      </section>
+      <section>
+        <h3>記録</h3>
+        <ul class="log">
+          <li><time>2 日前</time><span>見積の依頼を 3 社へ送った（見本 花子 が可とした）</span></li>
+          <li><time>昨日</time><span>見積 3 通を読んで比べた</span></li>
+          <li><time>昨日</time><span>下書きと承認の流れを作った（権限の規程・予算の残高から）</span></li>
+        </ul>
+      </section>
     </div>
-  </div>
+  </details>
 </main>
-</div>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>
