@@ -26,42 +26,44 @@
     </div>
   </section>
 
-  <details class="fold">
-    <summary>根拠を見る</summary>
-    <div class="body">
-      <section id="rpa">
-        <h3>読み戻し</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>項目</th><th>確定した申請</th><th>読み戻した値</th></tr></thead>
-            <tbody>
-              <tr><td>件名</td><td>第 3 会議室用ディスプレイ及び壁掛け金具の購入</td><td>同じ</td></tr>
-              <tr><td>金額</td><td class="num">78,320 円</td><td class="num">78,320 円</td></tr>
-              <tr><td>予算</td><td>X-000-01</td><td>X-000-01</td></tr>
-              <tr><td>承認者</td><td>例示 次郎 課長</td><td>例示 次郎 課長</td></tr>
-              <tr><td colspan="3" class="small muted">ほか 8 項目も一致。同じ件の二重の起案なし</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </div>
-  </details>
+  <div class="scroll">
+    <details class="fold">
+      <summary>根拠を見る</summary>
+      <div class="body">
+        <section id="rpa">
+          <h3>読み戻し</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>項目</th><th>確定した申請</th><th>読み戻した値</th></tr></thead>
+              <tbody>
+                <tr><td>件名</td><td>第 3 会議室用ディスプレイ及び壁掛け金具の購入</td><td>同じ</td></tr>
+                <tr><td>金額</td><td class="num">78,320 円</td><td class="num">78,320 円</td></tr>
+                <tr><td>予算</td><td>X-000-01</td><td>X-000-01</td></tr>
+                <tr><td>承認者</td><td>例示 次郎 課長</td><td>例示 次郎 課長</td></tr>
+                <tr><td colspan="3" class="small muted">ほか 8 項目も一致。同じ件の二重の起案なし</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </details>
 
-  <section class="card" id="log">
-    <h2>記録</h2>
-    <ul class="log">
-      <li><time>済</time><span>1 受け付け — AI。予算を聞き返した。<a href="request.html">会話</a></span></li>
-      <li><time>済</time><span>2 見積 — AI。3 社へ依頼し、3 通を比べた。<a href="confirm.html#quotes">比較</a></span></li>
-      <li><time>済</time><span>3 申請の準備 — AI。下書きと承認の流れ。<a href="confirm.html#draft">下書き</a></span></li>
-      <li><time>済</time><span>4 申請の確定 — 見本 花子。直しなし</span></li>
-      <li><time>いま</time><span>5 決裁への入力 — RPA。送る前の可を待つ</span></li>
-      <li><time>これから</time><span>6 承認 — 例示 次郎。<a href="approve.html">承認</a></span></li>
-      <li><time>これから</time><span>7 発注 — AI。注文書を作り、送る前に可を待つ</span></li>
-      <li><time>これから</time><span>8 受け取り — 見本 花子。<a href="receive.html">受け取り</a></span></li>
-      <li><time>これから</time><span>9 支払 — AI が突合し、例示 次郎 が承認。<a href="pay.html">支払</a></span></li>
-      <li><time>これから</time><span>10 格納 — 自動。注文書と承認の証跡を保存</span></li>
-    </ul>
-  </section>
+    <section class="card" id="log">
+      <h2>記録</h2>
+      <ul class="log">
+        <li><time>済</time><span>1 受け付け — AI。予算を聞き返した。<a href="request.html">会話</a></span></li>
+        <li><time>済</time><span>2 見積 — AI。3 社へ依頼し、3 通を比べた。<a href="confirm.html#quotes">比較</a></span></li>
+        <li><time>済</time><span>3 申請の準備 — AI。下書きと承認の流れ。<a href="confirm.html#draft">下書き</a></span></li>
+        <li><time>済</time><span>4 申請の確定 — 見本 花子。直しなし</span></li>
+        <li><time>いま</time><span>5 決裁への入力 — RPA。送る前の可を待つ</span></li>
+        <li><time>これから</time><span>6 承認 — 例示 次郎。<a href="approve.html">承認</a></span></li>
+        <li><time>これから</time><span>7 発注 — AI。注文書を作り、送る前に可を待つ</span></li>
+        <li><time>これから</time><span>8 受け取り — 見本 花子。<a href="receive.html">受け取り</a></span></li>
+        <li><time>これから</time><span>9 支払 — AI が突合し、例示 次郎 が承認。<a href="pay.html">支払</a></span></li>
+        <li><time>これから</time><span>10 格納 — 自動。注文書と承認の証跡を保存</span></li>
+      </ul>
+    </section>
+  </div>
 </main>
 <script src="assets/app.js"></script>
 </body>

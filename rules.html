@@ -24,56 +24,58 @@
     </div>
   </section>
 
-  <details class="fold">
-    <summary>根拠を見る</summary>
-    <div class="body">
-      <section>
-        <h3>条件</h3>
-        <ul class="checks">
-          <li>連続 20 / 20 件を直しなし</li>
-          <li>規程に反する件 0</li>
-          <li>差の見落とし 0</li>
-        </ul>
-      </section>
-      <section>
-        <h3>工程ごとの段階</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>工程</th><th>いま</th><th>連続</th><th>判定</th></tr></thead>
-            <tbody>
-              <tr><td>依頼の受け付け</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">20 / 20</td><td>上げられる</td></tr>
-              <tr><td>見積の依頼</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">20 / 20</td><td>上げられる</td></tr>
-              <tr><td>決裁への入力</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">14 / 20</td><td>あと 6 件</td></tr>
-              <tr class="diff"><td>注文書の送付</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">3 / 20</td><td>直し 1 件で戻った</td></tr>
-              <tr><td>請求の突合</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">11 / 20</td><td>あと 9 件</td></tr>
-              <tr><td>支払の下書き</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">9 / 20</td><td>あと 11 件</td></tr>
-              <tr><td>格納</td><td><span class="lv" data-lv="3">自動</span></td><td class="num">—</td><td>—</td></tr>
-              <tr><td>確定・承認・受け取り</td><td><span class="lv" data-lv="0">人</span></td><td class="num">—</td><td>上げない</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section>
-        <h3>抜き取り</h3>
-        <ul class="checks">
-          <li>R-0133 突合と支払の下書き: 問題なし</li>
-          <li>R-0124 見積の比較: 問題なし</li>
-          <li>R-0118 決裁への入力の記録: 問題なし</li>
-          <li class="w">R-0112 注文書の送付: 宛先の部署名の誤り（直した）</li>
-        </ul>
-      </section>
-      <section>
-        <h3>ルール</h3>
-        <dl class="kv">
-          <dt>対象</dt><dd>カタログ外・10 万円以下・登録済みの取引先</dd>
-          <dt>決裁の権限</dt><dd>10 万円以下の物品は課長</dd>
-          <dt>相見積</dt><dd>2 社以上</dd>
-          <dt>人に戻す例外</dt><dd>様式の指定・受け取りの違い・金額の差・新規の取引先・読み取りの自信が低い</dd>
-          <dt>AI の権限</dt><dd>承認の操作はできない</dd>
-        </dl>
-      </section>
-    </div>
-  </details>
+  <div class="scroll">
+    <details class="fold">
+      <summary>根拠を見る</summary>
+      <div class="body">
+        <section>
+          <h3>条件</h3>
+          <ul class="checks">
+            <li>連続 20 / 20 件を直しなし</li>
+            <li>規程に反する件 0</li>
+            <li>差の見落とし 0</li>
+          </ul>
+        </section>
+        <section>
+          <h3>工程ごとの段階</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>工程</th><th>いま</th><th>連続</th><th>判定</th></tr></thead>
+              <tbody>
+                <tr><td>依頼の受け付け</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">20 / 20</td><td>上げられる</td></tr>
+                <tr><td>見積の依頼</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">20 / 20</td><td>上げられる</td></tr>
+                <tr><td>決裁への入力</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">14 / 20</td><td>あと 6 件</td></tr>
+                <tr class="diff"><td>注文書の送付</td><td><span class="lv" data-lv="1">可否</span></td><td class="num">3 / 20</td><td>直し 1 件で戻った</td></tr>
+                <tr><td>請求の突合</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">11 / 20</td><td>あと 9 件</td></tr>
+                <tr><td>支払の下書き</td><td><span class="lv" data-lv="2">止められる</span></td><td class="num">9 / 20</td><td>あと 11 件</td></tr>
+                <tr><td>格納</td><td><span class="lv" data-lv="3">自動</span></td><td class="num">—</td><td>—</td></tr>
+                <tr><td>確定・承認・受け取り</td><td><span class="lv" data-lv="0">人</span></td><td class="num">—</td><td>上げない</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h3>抜き取り</h3>
+          <ul class="checks">
+            <li>R-0133 突合と支払の下書き: 問題なし</li>
+            <li>R-0124 見積の比較: 問題なし</li>
+            <li>R-0118 決裁への入力の記録: 問題なし</li>
+            <li class="w">R-0112 注文書の送付: 宛先の部署名の誤り（直した）</li>
+          </ul>
+        </section>
+        <section>
+          <h3>ルール</h3>
+          <dl class="kv">
+            <dt>対象</dt><dd>カタログ外・10 万円以下・登録済みの取引先</dd>
+            <dt>決裁の権限</dt><dd>10 万円以下の物品は課長</dd>
+            <dt>相見積</dt><dd>2 社以上</dd>
+            <dt>人に戻す例外</dt><dd>様式の指定・受け取りの違い・金額の差・新規の取引先・読み取りの自信が低い</dd>
+            <dt>AI の権限</dt><dd>承認の操作はできない</dd>
+          </dl>
+        </section>
+      </div>
+    </details>
+  </div>
 </main>
 <script src="assets/app.js"></script>
 </body>

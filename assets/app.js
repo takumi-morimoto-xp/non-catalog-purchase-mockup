@@ -1,5 +1,5 @@
 // カタログ外購入 To-Be の画面の見本（静的）。動く仕組みは無い。
-// 画面の題・案件の 10 段・見本の順は、この file の 3 つの表だけに持つ（各 HTML には書かない）。
+// 画面の題・案件の 10 段・見本の順・役ごとの画面は、この file の 4 つの表だけに持つ（各 HTML には書かない）。
 
 const PAGES = {
   "index.html": "入口",
@@ -36,6 +36,13 @@ const TOUR = [
   "reconcile.html", "exceptions.html", "cases.html", "rules.html", "guide.html",
 ];
 
+// 左の帯に出す、役ごとの画面。いまの画面が入る役の画面だけを出す（関係の無い役の画面は出さない）。
+const ROLES = [
+  { name: "依頼する人", pages: ["request.html", "confirm.html", "case.html", "receive.html"] },
+  { name: "承認する人", pages: ["approve.html", "pay.html", "reconcile.html", "exceptions.html"] },
+  { name: "総務の人", pages: ["cases.html", "rules.html"] },
+];
+
 const here = location.pathname.split("/").pop() || "index.html";
 
 function el(tag, attrs = {}, html = "") {
@@ -52,6 +59,19 @@ function renderTop() {
   top.innerHTML = `<a class="home" href="index.html">購入の依頼と決裁</a>
     <div class="row"><span class="sample-note">見本・データは作り物</span>
     ${who ? `<div class="who"><span class="avatar">${who.slice(0, 1)}</span><span>${who}</span></div>` : ""}</div>`;
+}
+
+// 左の帯: 入口・いまの役の画面・見方。上の帯の次に置く（外枠の grid の side）。
+function renderSide() {
+  const top = document.querySelector("[data-shell-header]");
+  if (!top) return;
+  const link = (href) => `<a href="${href}"${href === here ? ' aria-current="page"' : ""}>${PAGES[href]}</a>`;
+  const role = ROLES.find((r) => r.pages.includes(here));
+  const nav = el("nav", { class: "side", "aria-label": "画面の移動" },
+    link("index.html")
+    + (role ? `<h2>${role.name}</h2>${role.pages.map(link).join("")}` : "")
+    + `<div class="foot">${link("guide.html")}</div>`);
+  top.after(nav);
 }
 
 // 段の 1 行: 「いま 6/10 承認・次は 発注（自動）」。押すと 10 段が開く。
@@ -108,6 +128,7 @@ function openTarget() {
 }
 
 renderTop();
+renderSide();
 renderStage();
 renderPager();
 wireDecide();

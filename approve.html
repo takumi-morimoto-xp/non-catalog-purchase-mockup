@@ -26,58 +26,60 @@
     </div>
   </section>
 
-  <details class="fold">
-    <summary>根拠を見る</summary>
-    <div class="body">
-      <section>
-        <h3>規程</h3>
-        <ul class="checks">
-          <li class="w">資産の登録の要否は規程から決まらない。似た R-0061 は登録なし</li>
-          <li>10 万円以下の物品は課長の決裁で足りる</li>
-          <li>予算 X-000-01 の残り 412,000 円で足りる</li>
-          <li>取引先は登録済み（新規ではない）</li>
-          <li>相見積 3 社（基準は 2 社以上）</li>
-          <li>金額は似た案件の中央値より 6% 安い</li>
-          <li>納期は使いたい日の 3 営業日前</li>
-        </ul>
-      </section>
-      <section id="quotes">
-        <h3>見積</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>取引先</th><th class="num">金額</th><th>納期</th><th>保証</th></tr></thead>
-            <tbody>
-              <tr><td>見本電機（仮）・選んだ</td><td class="num">78,320 円</td><td>7 営業日</td><td>3 年</td></tr>
-              <tr><td>例示テック（仮）</td><td class="num">81,950 円</td><td>5 営業日</td><td>1 年</td></tr>
-              <tr><td>サンプル商会（仮）</td><td class="num">84,700 円</td><td>10 営業日</td><td>3 年</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section>
-        <h3>似た案件</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>案件</th><th>品目</th><th class="num">金額</th><th>結果</th></tr></thead>
-            <tbody>
-              <tr><td>R-0098</td><td>ディスプレイ 1 台</td><td class="num">41,800 円</td><td>承認</td></tr>
-              <tr><td>R-0061</td><td>ディスプレイと金具</td><td class="num">52,300 円</td><td>承認・資産の登録なし</td></tr>
-              <tr><td>R-0017</td><td>プロジェクター</td><td class="num">96,800 円</td><td>差し戻し・相見積 1 社</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section>
-        <h3>記録</h3>
-        <ul class="log">
-          <li><time>3 日前</time><span>依頼を受け付け、予算を聞き返した</span></li>
-          <li><time>2 日前</time><span>3 社の見積を読んで比べた（見積 Q-0007〜0009）</span></li>
-          <li><time>昨日</time><span>見本 花子 が申請を確定した</span></li>
-          <li><time>今日</time><span>決裁へ入力し、読み戻し 12 / 12 が一致した。<a href="case.html">案件の記録</a></span></li>
-        </ul>
-      </section>
-    </div>
-  </details>
+  <div class="scroll">
+    <details class="fold">
+      <summary>根拠を見る</summary>
+      <div class="body">
+        <section>
+          <h3>規程</h3>
+          <ul class="checks">
+            <li class="w">資産の登録の要否は規程から決まらない。似た R-0061 は登録なし</li>
+            <li>10 万円以下の物品は課長の決裁で足りる</li>
+            <li>予算 X-000-01 の残り 412,000 円で足りる</li>
+            <li>取引先は登録済み（新規ではない）</li>
+            <li>相見積 3 社（基準は 2 社以上）</li>
+            <li>金額は似た案件の中央値より 6% 安い</li>
+            <li>納期は使いたい日の 3 営業日前</li>
+          </ul>
+        </section>
+        <section id="quotes">
+          <h3>見積</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>取引先</th><th class="num">金額</th><th>納期</th><th>保証</th></tr></thead>
+              <tbody>
+                <tr><td>見本電機（仮）・選んだ</td><td class="num">78,320 円</td><td>7 営業日</td><td>3 年</td></tr>
+                <tr><td>例示テック（仮）</td><td class="num">81,950 円</td><td>5 営業日</td><td>1 年</td></tr>
+                <tr><td>サンプル商会（仮）</td><td class="num">84,700 円</td><td>10 営業日</td><td>3 年</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h3>似た案件</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>案件</th><th>品目</th><th class="num">金額</th><th>結果</th></tr></thead>
+              <tbody>
+                <tr><td>R-0098</td><td>ディスプレイ 1 台</td><td class="num">41,800 円</td><td>承認</td></tr>
+                <tr><td>R-0061</td><td>ディスプレイと金具</td><td class="num">52,300 円</td><td>承認・資産の登録なし</td></tr>
+                <tr><td>R-0017</td><td>プロジェクター</td><td class="num">96,800 円</td><td>差し戻し・相見積 1 社</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h3>記録</h3>
+          <ul class="log">
+            <li><time>3 日前</time><span>依頼を受け付け、予算を聞き返した</span></li>
+            <li><time>2 日前</time><span>3 社の見積を読んで比べた（見積 Q-0007〜0009）</span></li>
+            <li><time>昨日</time><span>見本 花子 が申請を確定した</span></li>
+            <li><time>今日</time><span>決裁へ入力し、読み戻し 12 / 12 が一致した。<a href="case.html">案件の記録</a></span></li>
+          </ul>
+        </section>
+      </div>
+    </details>
+  </div>
 </main>
 <script src="assets/app.js"></script>
 </body>

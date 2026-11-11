@@ -26,37 +26,39 @@
     </div>
   </section>
 
-  <details class="fold alert" open>
-    <summary>差のある項目</summary>
-    <div class="body">
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>項目</th><th class="num">注文書</th><th class="num">請求書</th><th class="num">差</th></tr></thead>
-          <tbody>
-            <tr class="diff"><td>送料</td><td class="num">0 円</td><td class="num">1,100 円</td><td class="num">+1,100 円</td></tr>
-            <tr class="diff"><td>合計（税込）</td><td class="num">27,720 円</td><td class="num">28,930 円</td><td class="num">+1,210 円</td></tr>
-          </tbody>
-        </table>
+  <div class="scroll">
+    <details class="fold alert" open>
+      <summary>差のある項目</summary>
+      <div class="body">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>項目</th><th class="num">注文書</th><th class="num">請求書</th><th class="num">差</th></tr></thead>
+            <tbody>
+              <tr class="diff"><td>送料</td><td class="num">0 円</td><td class="num">1,100 円</td><td class="num">+1,100 円</td></tr>
+              <tr class="diff"><td>合計（税込）</td><td class="num">27,720 円</td><td class="num">28,930 円</td><td class="num">+1,210 円</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  </details>
+    </details>
 
-  <details class="fold">
-    <summary>根拠を見る</summary>
-    <div class="body">
-      <section>
-        <h3>一致した項目</h3>
-        <ul class="checks"><li>トナー（黒）6 × 4,200 円: 注文書・受け取り・請求書が一致</li></ul>
-      </section>
-      <section>
-        <h3>記録</h3>
-        <ul class="log">
-          <li><time>2 日前</time><span>取引先へ送料の根拠を聞いた。返事:「分納のため 2 回目の送料を加えた」</span></li>
-          <li><time>昨日</time><span>見積 Q-0099 を読み直した:「送料込み・一括納品」。分納は取引先の都合</span></li>
-        </ul>
-      </section>
-    </div>
-  </details>
+    <details class="fold">
+      <summary>根拠を見る</summary>
+      <div class="body">
+        <section>
+          <h3>一致した項目</h3>
+          <ul class="checks"><li>トナー（黒）6 × 4,200 円: 注文書・受け取り・請求書が一致</li></ul>
+        </section>
+        <section>
+          <h3>記録</h3>
+          <ul class="log">
+            <li><time>2 日前</time><span>取引先へ送料の根拠を聞いた。返事:「分納のため 2 回目の送料を加えた」</span></li>
+            <li><time>昨日</time><span>見積 Q-0099 を読み直した:「送料込み・一括納品」。分納は取引先の都合</span></li>
+          </ul>
+        </section>
+      </div>
+    </details>
+  </div>
 </main>
 <script src="assets/app.js"></script>
 </body>

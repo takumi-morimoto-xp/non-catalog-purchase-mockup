@@ -1,6 +1,8 @@
 /* カタログ外購入 To-Be の画面の見本（静的）。
    型: 4px 格子（余白は 4・8・12・16・20・24・32・40・48）、文字 12・14・16・20・24、太さ 400・500・600、角丸 4・8・12、上の帯 56。
-   作業の画面は 1 列（幅 720）で、1 件について 1 つ決める。色は「要確認・異常」だけに使い、ほかは墨と灰で組む。 */
+   作業の画面は 1 列（幅 720）で、1 件について 1 つ決める。色は「要確認・異常」だけに使い、ほかは墨と灰で組む。
+   高さの型（社内の業務の画面）: 外枠は表示の高さ（100dvh。使えない環境は 100vh）で、ページ全体は scroll しない。
+   上の帯と左の帯は留め、中の領域（.scroll）だけが必要なときに scroll する。決める枠（.decide）は .scroll の外に置き、動かない。 */
 
 :root {
   --bg: #f6f7f9;
@@ -28,8 +30,10 @@
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; }
-body { font-family: var(--font); font-size: 14px; line-height: 20px; color: var(--text); background: var(--bg); }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body { font-family: var(--font); font-size: 14px; line-height: 20px; color: var(--text); background: var(--bg);
+  height: 100vh; height: 100dvh; display: grid;
+  grid-template: "top top" 56px "side main" minmax(0, 1fr) / 208px minmax(0, 1fr); }
 a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 4px; }
 a:hover { text-decoration-color: var(--ink); }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
@@ -37,16 +41,32 @@ h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
 ul, ol { padding-left: 20px; }
 
 /* ---- 上の帯 ---- */
-.top { height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 2; }
+.top { grid-area: top; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; background: var(--surface); border-bottom: 1px solid var(--line); z-index: 2; }
 .top .home { font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; }
 .top .row { gap: 12px; }
 .top .who { display: flex; align-items: center; gap: 8px; font-size: 12px; line-height: 16px; color: var(--text-2); white-space: nowrap; }
 .top .avatar { width: 32px; height: 32px; border-radius: 999px; background: var(--sunken); border: 1px solid var(--line); display: grid; place-items: center; font-weight: 600; font-size: 12px; color: var(--ink); }
 .sample-note { font-size: 12px; line-height: 16px; color: var(--text-3); border: 1px dashed var(--line-strong); border-radius: var(--radius-s); padding: 4px 8px; white-space: nowrap; }
 
-/* ---- 本文 ---- */
-.main { max-width: 768px; margin: 0 auto; padding: 24px 24px 48px; display: flex; flex-direction: column; gap: 20px; }
-.main.wide { max-width: 1040px; }
+/* ---- 左の帯（app.js が組む）: 入口・いまの役の画面・見方 ---- */
+.side { grid-area: side; overflow-y: auto; background: var(--surface); border-right: 1px solid var(--line); padding: 16px 12px; display: flex; flex-direction: column; gap: 4px; }
+.side a { display: block; padding: 8px 12px; border-radius: var(--radius-s); color: var(--text-2); text-decoration: none; }
+.side a:hover { background: var(--sunken); color: var(--ink); }
+.side a[aria-current="page"] { background: var(--sunken); color: var(--ink); font-weight: 600; box-shadow: inset 4px 0 0 var(--ink); }
+.side h2 { padding: 16px 12px 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--text-3); }
+.side .foot { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; line-height: 16px; }
+
+/* ---- 本文: 表示の高さの中で、上から 段の 1 行・決める枠・中の領域（.scroll）・見本の順 ---- */
+.main { --col: 720px; grid-area: main; min-height: 0; overflow: hidden; display: flex; flex-direction: column; gap: 20px;
+  padding: 24px max(24px, calc((100% - var(--col)) / 2)) 16px; }
+.main.wide { --col: 992px; }
+.main > * { flex: none; }
+.main > .scroll { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 20px;
+  margin: 0 -4px; padding: 0 4px 4px; }
+.scroll > * { flex: none; }
+/* 中の領域の表は見出しの行を留める（表の枠を scroll させず、.scroll に貼る） */
+.scroll .table-wrap { overflow: visible; }
+.scroll thead th { position: sticky; top: 0; z-index: 1; background: var(--surface); box-shadow: inset 0 -1px 0 var(--line); }
 h1 { font-size: 24px; line-height: 32px; font-weight: 600; color: var(--ink); }
 h2 { font-size: 16px; line-height: 24px; font-weight: 600; color: var(--ink); }
 h3 { font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-3); margin-bottom: 8px; }
@@ -57,13 +77,15 @@ h3 { font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-3);
 .stack { display: flex; flex-direction: column; gap: 16px; }
 
 /* ---- 段の 1 行（app.js が組む。押すと 10 段が開く） ---- */
-.stage { font-size: 12px; line-height: 16px; color: var(--text-3); }
+.stage { position: relative; font-size: 12px; line-height: 16px; color: var(--text-3); }
 .stage > :first-child { cursor: pointer; list-style: none; display: inline-flex; gap: 8px; align-items: center; }
 .stage > :first-child::-webkit-details-marker { display: none; }
 .stage > :first-child::after { content: "▾"; font-size: 10px; }
 .stage[open] > :first-child::after { content: "▴"; }
 .stage b { color: var(--ink); font-weight: 600; }
-.stage ol { list-style: none; padding: 12px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+/* 10 段は下に重ねて開く（決める枠を押し下げない） */
+.stage ol { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 4; list-style: none; margin: 0; padding: 12px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(17, 24, 39, 0.16); }
 .stage li a { display: block; padding: 8px; border-radius: var(--radius-s); border: 1px solid var(--line); background: var(--surface); color: var(--text-2); text-decoration: none; }
 .stage li.now a { border-color: var(--ink); color: var(--ink); font-weight: 600; }
 .stage li.done a { color: var(--text-3); background: var(--sunken); }
@@ -157,7 +179,7 @@ td a { font-weight: 500; }
 .meter i { display: block; height: 100%; background: var(--text-3); }
 
 /* ---- 見本の順（前へ・次へ）。作業の画面の外の案内 ---- */
-.pager { display: flex; justify-content: space-between; gap: 16px; padding-top: 16px; border-top: 1px dashed var(--line-strong); font-size: 12px; line-height: 16px; }
+.pager { display: flex; justify-content: space-between; gap: 16px; padding-top: 12px; border-top: 1px dashed var(--line-strong); font-size: 12px; line-height: 16px; }
 .pager a { color: var(--text-3); }
 .pager a.next { margin-left: auto; text-align: right; }
 
@@ -170,9 +192,13 @@ td a { font-weight: 500; }
 
 /* スマホの幅: ボタンは画面の下に留め、開いてすぐ 1 操作で済むようにする */
 @media (max-width: 640px) {
+  body { grid-template: "top" 56px "main" minmax(0, 1fr) / minmax(0, 1fr); }
+  .side { display: none; }
   .top { padding: 0 16px; }
   .top .who span:last-child, .sample-note { display: none; }
-  .main { padding: 16px 16px 120px; gap: 16px; }
+  .main { padding: 16px 16px 12px; gap: 16px; }
+  .main:has(.decide .actions) { padding-bottom: 84px; }  /* 下に留めたボタンの帯（48 + 12 × 2）の分を空ける */
+  .main > .scroll { gap: 16px; }
   h1 { font-size: 20px; line-height: 28px; }
   .decide { padding: 16px; gap: 16px; border: 0; background: none; padding: 0; }
   .facts { grid-template-columns: 48px minmax(0, 1fr); }
@@ -187,4 +213,20 @@ td a { font-weight: 500; }
   .composer .btn { padding: 0 16px; }
   .kv { grid-template-columns: 88px minmax(0, 1fr); }
   .card, .role { padding: 16px; }
+  th, td { padding: 8px 4px; }
+  th:first-child, td:first-child { padding-left: 0; }
+  th:last-child, td:last-child { padding-right: 0; }
+  /* 一覧の表（table.rows）は 1 件を 2 行に組む: 件名・金額 / いまの段・待っている人・期限。見出しの行は出さない */
+  table.rows thead { display: none; }
+  table.rows tbody tr { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; gap: 4px 8px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  table.rows tbody tr:last-child { border-bottom: 0; }
+  table.rows td { padding: 0; border: 0; font-size: 12px; line-height: 16px; color: var(--text-3); }
+  table.rows td:nth-child(1) { grid-column: 1 / 4; min-width: 0; font-size: 14px; line-height: 20px; color: var(--text); }
+  table.rows td:nth-child(2) { grid-column: 4; font-size: 14px; line-height: 20px; color: var(--ink); }
+  table.rows td:nth-child(3) { grid-column: 1; }
+  table.rows td:nth-child(4) { grid-column: 2; }
+  table.rows td:nth-child(5) { grid-column: 4; text-align: right; }
+  table.rows td[colspan] { grid-column: 1 / -1; }
+  table.rows tr.stuck { box-shadow: inset 4px 0 0 var(--ng-mark); padding-left: 12px; }
+  table.rows tr.stuck td:first-child { box-shadow: none; }
 }
