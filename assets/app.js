@@ -18,7 +18,7 @@ const PAGES = {
 
 // 案件の 10 段（to-be.md 表 4）。by は担い手（人 か 自動）。
 const STAGES = [
-  { n: 1, name: "受け付け", by: "自動", href: "request.html" },
+  { n: 1, name: "依頼", by: "人", href: "request.html" },
   { n: 2, name: "見積", by: "自動", href: "confirm.html#quotes" },
   { n: 3, name: "申請の準備", by: "自動", href: "confirm.html#draft" },
   { n: 4, name: "申請の確定", by: "人", href: "confirm.html" },
