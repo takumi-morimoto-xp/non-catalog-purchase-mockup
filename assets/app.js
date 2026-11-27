@@ -1,5 +1,5 @@
 // カタログ外購入 To-Be の画面の見本（静的）。動く仕組みは無い。
-// 画面の題・案件の 10 段・見本の順・役ごとの画面は、この file の 4 つの表だけに持つ（各 HTML には書かない）。
+// 画面の題・案件の 10 工程・見本の順・役ごとの画面は、この file の 4 つの表だけに持つ（各 HTML には書かない）。
 
 const PAGES = {
   "index.html": "入口",
@@ -16,7 +16,7 @@ const PAGES = {
   "rules.html": "任せる範囲",
 };
 
-// 案件の 10 段（to-be.md 表 4）。by は担い手（人 か 自動）。
+// 案件の 10 工程（to-be.md 表 4）。by は担い手（人 か 自動）。
 const STAGES = [
   { n: 1, name: "依頼", by: "人", href: "request.html" },
   { n: 2, name: "見積", by: "自動", href: "confirm.html#quotes" },
@@ -74,7 +74,7 @@ function renderSide() {
   top.after(nav);
 }
 
-// 段の 1 行: 「いま 6/10 承認・次は 発注（自動）」。押すと 10 段が開く。
+// 工程の 1 行: 「いま 6/10 承認・次は 発注（自動）」。押すと 10 工程が開く。
 function renderStage() {
   const box = document.querySelector("[data-stage]");
   if (!box) return;
@@ -118,7 +118,7 @@ function wireDecide() {
   });
 }
 
-// #anchor が畳んだ枠の中にあるときは開く（段の 1 行や記録の link から来たとき）。
+// #anchor が畳んだ枠の中にあるときは開く（工程の 1 行や記録の link から来たとき）。
 function openTarget() {
   const id = location.hash.slice(1);
   const t = id && document.getElementById(id);

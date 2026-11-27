@@ -56,7 +56,7 @@ ul, ol { padding-left: 20px; }
 .side h2 { padding: 16px 12px 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--text-3); }
 .side .foot { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; line-height: 16px; }
 
-/* ---- 本文: 表示の高さの中で、上から 段の 1 行・決める枠・中の領域（.scroll）・見本の順 ---- */
+/* ---- 本文: 表示の高さの中で、上から 工程の 1 行・決める枠・中の領域（.scroll）・見本の順 ---- */
 .main { --col: 720px; grid-area: main; min-height: 0; overflow: hidden; display: flex; flex-direction: column; gap: 20px;
   padding: 24px max(24px, calc((100% - var(--col)) / 2)) 16px; }
 .main.wide { --col: 992px; }
@@ -76,14 +76,14 @@ h3 { font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-3);
 .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .stack { display: flex; flex-direction: column; gap: 16px; }
 
-/* ---- 段の 1 行（app.js が組む。押すと 10 段が開く） ---- */
+/* ---- 工程の 1 行（app.js が組む。押すと 10 工程が開く） ---- */
 .stage { position: relative; font-size: 12px; line-height: 16px; color: var(--text-3); }
 .stage > :first-child { cursor: pointer; list-style: none; display: inline-flex; gap: 8px; align-items: center; }
 .stage > :first-child::-webkit-details-marker { display: none; }
 .stage > :first-child::after { content: "▾"; font-size: 10px; }
 .stage[open] > :first-child::after { content: "▴"; }
 .stage b { color: var(--ink); font-weight: 600; }
-/* 10 段は下に重ねて開く（決める枠を押し下げない） */
+/* 10 工程は下に重ねて開く（決める枠を押し下げない） */
 .stage ol { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 4; list-style: none; margin: 0; padding: 12px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(17, 24, 39, 0.16); }
 .stage li a { display: block; padding: 8px; border-radius: var(--radius-s); border: 1px solid var(--line); background: var(--surface); color: var(--text-2); text-decoration: none; }
@@ -226,7 +226,7 @@ td a { font-weight: 500; }
   th, td { padding: 8px 4px; }
   th:first-child, td:first-child { padding-left: 0; }
   th:last-child, td:last-child { padding-right: 0; }
-  /* 一覧の表（table.rows）は 1 件を 2 行に組む: 件名・金額 / いまの段・待っている人・期限。見出しの行は出さない */
+  /* 一覧の表（table.rows）は 1 件を 2 行に組む: 件名・金額 / いまの工程・待っている人・期限。見出しの行は出さない */
   table.rows thead { display: none; }
   table.rows tbody tr { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; gap: 4px 8px; padding: 12px 0; border-bottom: 1px solid var(--line); }
   table.rows tbody tr:last-child { border-bottom: 0; }
